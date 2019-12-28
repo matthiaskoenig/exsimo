@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" metaid="meta_71450613d3ef4d02bd2937569411e739" sboTerm="SBO:0000293" level="3" version="1" fbc:required="false" comp:required="true">
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" metaid="meta_4d86bf4da3084737bc7fa91adc2a15dd" sboTerm="SBO:0000293" level="3" version="1" fbc:required="false" comp:required="true">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_71450613d3ef4d02bd2937569411e739">
+      <rdf:Description rdf:about="#meta_4d86bf4da3084737bc7fa91adc2a15dd">
         <bqmodel:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000293"/>
@@ -66,10 +66,10 @@
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2019-12-28T19:18:38Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2019-12-28T20:11:32Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2019-12-28T19:18:38Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2019-12-28T20:11:32Z</dcterms:W3CDTF>
           </dcterms:modified>
         </rdf:Description>
       </rdf:RDF>
@@ -127,14 +127,14 @@
       </functionDefinition>
     </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
-      <unitDefinition id="l">
-        <listOfUnits>
-          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
       <unitDefinition id="s">
         <listOfUnits>
           <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="min">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
         </listOfUnits>
       </unitDefinition>
       <unitDefinition id="kg">
@@ -157,22 +157,6 @@
           <unit kind="metre" exponent="3" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
-      <unitDefinition id="per_s">
-        <listOfUnits>
-          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="min">
-        <listOfUnits>
-          <unit kind="second" exponent="1" scale="0" multiplier="60"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="s_per_min">
-        <listOfUnits>
-          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
-          <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
-        </listOfUnits>
-      </unitDefinition>
       <unitDefinition id="mmole">
         <listOfUnits>
           <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
@@ -180,8 +164,24 @@
       </unitDefinition>
       <unitDefinition id="mM">
         <listOfUnits>
-          <unit kind="mole" exponent="1" scale="0" multiplier="1"/>
-          <unit kind="metre" exponent="-3" scale="0" multiplier="1"/>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_s">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_min">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="s_per_min">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
         </listOfUnits>
       </unitDefinition>
       <unitDefinition id="per_mM">
@@ -231,28 +231,6 @@
           <unit kind="mole" exponent="1" scale="-6" multiplier="1"/>
           <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
           <unit kind="kilogram" exponent="-1" scale="0" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mg">
-        <listOfUnits>
-          <unit kind="gram" exponent="1" scale="-3" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="ml">
-        <listOfUnits>
-          <unit kind="litre" exponent="1" scale="-3" multiplier="1"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="per_min">
-        <listOfUnits>
-          <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
-        </listOfUnits>
-      </unitDefinition>
-      <unitDefinition id="mmole_per_min_l">
-        <listOfUnits>
-          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
-          <unit kind="second" exponent="-1" scale="0" multiplier="60"/>
-          <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
         </listOfUnits>
       </unitDefinition>
     </listOfUnitDefinitions>
@@ -334,55 +312,927 @@
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="Aatp" name="ATP" compartment="cyto" initialConcentration="2.8" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aadp" name="ADP" compartment="cyto" initialConcentration="0.8" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aamp" name="AMP" compartment="cyto" initialConcentration="0.16" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Autp" name="UTP" compartment="cyto" initialConcentration="0.27" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Audp" name="UDP" compartment="cyto" initialConcentration="0.09" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Agtp" name="GTP" compartment="cyto" initialConcentration="0.29" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Agdp" name="GDP" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Anad" name="NAD+" compartment="cyto" initialConcentration="1.22" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Anadh" name="NADH" compartment="cyto" initialConcentration="0.00056" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aphos" name="phosphate" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="App" name="pyrophosphate" compartment="cyto" initialConcentration="0.008" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aco2" name="CO2" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Ah2o" name="H2O" compartment="cyto" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Ah" name="H+" compartment="cyto" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aglc1p" name="glucose-1 phosphate" compartment="cyto" initialConcentration="0.012" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Audpglc" name="UDP-glucose" compartment="cyto" initialConcentration="0.38" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aglyglc" name="glycogen" compartment="cyto" initialConcentration="250" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aglc" name="glucose" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aglc6p" name="glucose-6 phosphate" compartment="cyto" initialConcentration="0.12" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Afru6p" name="fructose-6 phosphate" compartment="cyto" initialConcentration="0.05" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Afru16bp" name="fructose-16 bisphosphate" compartment="cyto" initialConcentration="0.02" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Afru26bp" name="fructose-26 bisphosphate" compartment="cyto" initialConcentration="0.004" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Agrap" name="glyceraldehyde 3-phosphate" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Adhap" name="dihydroxyacetone phosphate" compartment="cyto" initialConcentration="0.03" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Abpg13" name="13-bisphospho-glycerate" compartment="cyto" initialConcentration="0.3" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Apg3" name="3-phosphoglycerate" compartment="cyto" initialConcentration="0.27" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Apg2" name="2-phosphoglycerate" compartment="cyto" initialConcentration="0.03" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Apep" name="phosphoenolpyruvate" compartment="cyto" initialConcentration="0.15" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Apyr" name="pyruvate" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aoaa" name="oxaloacetate" compartment="cyto" initialConcentration="0.01" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Alac" name="lactate" compartment="cyto" initialConcentration="0.5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aglc_ext" name="glucose" compartment="ext" initialConcentration="3" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Alac_ext" name="lactate" compartment="ext" initialConcentration="1.2" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aco2_mito" name="CO2" compartment="mito" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aphos_mito" name="phosphate" compartment="mito" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aoaa_mito" name=" oxaloacetate" compartment="mito" initialConcentration="0.01" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Apep_mito" name="phosphoenolpyruvate" compartment="mito" initialConcentration="0.15" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Aacoa_mito" name="acetyl-coenzyme A" compartment="mito" initialConcentration="0.04" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Apyr_mito" name="pyruvate" compartment="mito" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Acit_mito" name="citrate" compartment="mito" initialConcentration="0.32" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aatp_mito" name="ATP" compartment="mito" initialConcentration="2.8" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Aadp_mito" name="ADP" compartment="mito" initialConcentration="0.8" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Agtp_mito" name="GTP" compartment="mito" initialConcentration="0.29" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Agdp_mito" name="GDP" compartment="mito" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="false" constant="false"/>
-      <species id="Acoa_mito" name="coenzyme A" compartment="mito" initialConcentration="0.055" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Anadh_mito" name="NADH" compartment="mito" initialConcentration="0.24" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Anad_mito" name="NAD+" compartment="mito" initialConcentration="0.98" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Ah2o_mito" name="H20" compartment="mito" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
-      <species id="Ah_mito" name="H+" compartment="mito" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false"/>
+      <species metaid="meta_atp" sboTerm="SBO:0000247" id="atp" name="ATP" compartment="cyto" initialConcentration="2.8" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-4" fbc:chemicalFormula="C10H12N5O13P3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_atp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:30616"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00002"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_adp" sboTerm="SBO:0000247" id="adp" name="ADP" compartment="cyto" initialConcentration="0.8" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-3" fbc:chemicalFormula="C10H12N5O10P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_adp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:456216"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00008"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_amp" sboTerm="SBO:0000247" id="amp" name="AMP" compartment="cyto" initialConcentration="0.16" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="C10H12N5O7P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_amp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:456215"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00020"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_utp" sboTerm="SBO:0000247" id="utp" name="UTP" compartment="cyto" initialConcentration="0.27" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C9H11N2O15P3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_utp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:46398"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00075"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_udp" sboTerm="SBO:0000247" id="udp" name="UDP" compartment="cyto" initialConcentration="0.09" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C9H11N2O12P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_udp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58223"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00015"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_gtp" sboTerm="SBO:0000247" id="gtp" name="GTP" compartment="cyto" initialConcentration="0.29" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C10H12N5O14P3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_gtp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:37565"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00044"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_gdp" sboTerm="SBO:0000247" id="gdp" name="GDP" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C10H12N5O11P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_gdp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58189"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00035"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_nad" sboTerm="SBO:0000247" id="nad" name="NAD+" compartment="cyto" initialConcentration="1.22" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-1" fbc:chemicalFormula="C21H26N7O14P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_nad">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57540"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00003"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_nadh" sboTerm="SBO:0000247" id="nadh" name="NADH" compartment="cyto" initialConcentration="0.00056" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="C21H27N7O14P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_nadh">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57540"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57945"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00003"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00004"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_phos" sboTerm="SBO:0000247" id="phos" name="phosphate" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="HO4P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_phos">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:43474"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00009"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pp" sboTerm="SBO:0000247" id="pp" name="pyrophosphate" compartment="cyto" initialConcentration="0.008" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="HO7P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:33019"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00013"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_co2" sboTerm="SBO:0000247" id="co2" name="CO2" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="CO2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_co2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00011"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_h2o" sboTerm="SBO:0000247" id="h2o" name="H2O" compartment="cyto" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="H2O">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_h2o">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15378"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00080"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:18276"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00282"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15377"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00001"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_h" sboTerm="SBO:0000247" id="h" name="H+" compartment="cyto" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="1" fbc:chemicalFormula="H">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_h">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15378"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00080"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_glc1p" sboTerm="SBO:0000247" id="glc1p" name="glucose-1 phosphate" compartment="cyto" initialConcentration="0.012" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C6H11O9P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_glc1p">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/WQZGKKKJIJFFOK-GASJEMHNSA-N"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00031"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/ZKHQWZAMYRWXGA-KQYNXXCUSA-J"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00103"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58601"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_udpglc" sboTerm="SBO:0000247" id="udpglc" name="UDP-glucose" compartment="cyto" initialConcentration="0.38" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C15H22N2O17P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_udpglc">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58223"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58885"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00015"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00029"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_glyglc" sboTerm="SBO:0000247" id="glyglc" name="glycogen" compartment="cyto" initialConcentration="250" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_glyglc">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00182"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:28087"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_glc" sboTerm="SBO:0000247" id="glc" name="glucose" compartment="cyto" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_glc">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/WQZGKKKJIJFFOK-GASJEMHNSA-N"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00031"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/ZKHQWZAMYRWXGA-KQYNXXCUSA-J"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_glc6p" sboTerm="SBO:0000247" id="glc6p" name="glucose-6 phosphate" compartment="cyto" initialConcentration="0.12" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C6H11O9P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_glc6p">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/WQZGKKKJIJFFOK-GASJEMHNSA-N"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00031"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/ZKHQWZAMYRWXGA-KQYNXXCUSA-J"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:61548"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00668"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_fru6p" sboTerm="SBO:0000247" id="fru6p" name="fructose-6 phosphate" compartment="cyto" initialConcentration="0.05" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C6H11O9P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_fru6p">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57579"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00085"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_fru16bp" sboTerm="SBO:0000247" id="fru16bp" name="fructose-16 bisphosphate" compartment="cyto" initialConcentration="0.02" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C6H10O12P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_fru16bp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:49299"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00354"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_fru26bp" sboTerm="SBO:0000247" id="fru26bp" name="fructose-26 bisphosphate" compartment="cyto" initialConcentration="0.004" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C6H10O12P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_fru26bp">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58579"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00665"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_grap" sboTerm="SBO:0000247" id="grap" name="glyceraldehyde 3-phosphate" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C3H5O6P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_grap">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:59776"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00118"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_dhap" sboTerm="SBO:0000247" id="dhap" name="dihydroxyacetone phosphate" compartment="cyto" initialConcentration="0.03" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C3H5O6P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_dhap">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57642"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00111"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_bpg13" sboTerm="SBO:0000247" id="bpg13" name="13-bisphospho-glycerate" compartment="cyto" initialConcentration="0.3" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C3H4O10P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_bpg13">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57604"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00236"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pg3" sboTerm="SBO:0000247" id="pg3" name="3-phosphoglycerate" compartment="cyto" initialConcentration="0.27" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H4O7P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pg3">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58272"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00197"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pg2" sboTerm="SBO:0000247" id="pg2" name="2-phosphoglycerate" compartment="cyto" initialConcentration="0.03" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H4O7P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pg2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58289"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00631"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pep" sboTerm="SBO:0000247" id="pep" name="phosphoenolpyruvate" compartment="cyto" initialConcentration="0.15" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H4O7P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pep">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58702"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00074"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pyr" sboTerm="SBO:0000247" id="pyr" name="pyruvate" compartment="cyto" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H2O6P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pyr">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15361"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00022"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_oaa" sboTerm="SBO:0000247" id="oaa" name="oxaloacetate" compartment="cyto" initialConcentration="0.01" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C3H3O3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_oaa">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16452"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00036"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_lac" sboTerm="SBO:0000247" id="lac" name="lactate" compartment="cyto" initialConcentration="0.5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C4H2O5">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_lac">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16651"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00186"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_glc_ext" sboTerm="SBO:0000247" id="glc_ext" name="glucose" compartment="ext" initialConcentration="3" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_glc_ext">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/WQZGKKKJIJFFOK-GASJEMHNSA-N"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00031"/>
+                  <rdf:li rdf:resource="https://identifiers.org/inchikey/ZKHQWZAMYRWXGA-KQYNXXCUSA-J"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_lac_ext" sboTerm="SBO:0000247" id="lac_ext" name="lactate" compartment="ext" initialConcentration="1.2" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="C4H2O5">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_lac_ext">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16651"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00186"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_co2_mito" sboTerm="SBO:0000247" id="co2_mito" name="CO2" compartment="mito" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="CO2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_co2_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00011"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_phos_mito" sboTerm="SBO:0000247" id="phos_mito" name="phosphate" compartment="mito" initialConcentration="5" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="HO4P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_phos_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:43474"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00009"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_oaa_mito" sboTerm="SBO:0000247" id="oaa_mito" name=" oxaloacetate" compartment="mito" initialConcentration="0.01" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C3H3O3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_oaa_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16452"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00036"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pep_mito" sboTerm="SBO:0000247" id="pep_mito" name="phosphoenolpyruvate" compartment="mito" initialConcentration="0.15" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H4O7P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pep_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58702"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00074"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_acoa_mito" sboTerm="SBO:0000247" id="acoa_mito" name="acetyl-coenzyme A" compartment="mito" initialConcentration="0.04" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-4" fbc:chemicalFormula="C23H34N7O17P3S">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_acoa_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57288"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00024"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_pyr_mito" sboTerm="SBO:0000247" id="pyr_mito" name="pyruvate" compartment="mito" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C3H2O6P">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_pyr_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15361"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00022"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_cit_mito" sboTerm="SBO:0000247" id="cit_mito" name="citrate" compartment="mito" initialConcentration="0.32" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-3" fbc:chemicalFormula="C6H5O7">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_cit_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:16947"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00158"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_atp_mito" sboTerm="SBO:0000247" id="atp_mito" name="ATP" compartment="mito" initialConcentration="2.8" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-4" fbc:chemicalFormula="C10H12N5O13P3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_atp_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:30616"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00002"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_adp_mito" sboTerm="SBO:0000247" id="adp_mito" name="ADP" compartment="mito" initialConcentration="0.8" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-3" fbc:chemicalFormula="C10H12N5O10P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_adp_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:456216"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00008"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_gtp_mito" sboTerm="SBO:0000247" id="gtp_mito" name="GTP" compartment="mito" initialConcentration="0.29" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-4" fbc:chemicalFormula="C10H12N5O14P3">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_gtp_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:37565"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00044"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_gdp_mito" sboTerm="SBO:0000247" id="gdp_mito" name="GDP" compartment="mito" initialConcentration="0.1" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C10H12N5O11P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_gdp_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:58189"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00035"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_coa_mito" sboTerm="SBO:0000247" id="coa_mito" name="coenzyme A" compartment="mito" initialConcentration="0.055" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-4" fbc:chemicalFormula="C21H32N7O16P3S">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_coa_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57287"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00010"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_nadh_mito" sboTerm="SBO:0000247" id="nadh_mito" name="NADH" compartment="mito" initialConcentration="0.24" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-2" fbc:chemicalFormula="C21H27N7O14P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_nadh_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57540"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57945"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00003"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00004"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_nad_mito" sboTerm="SBO:0000247" id="nad_mito" name="NAD+" compartment="mito" initialConcentration="0.98" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="-1" fbc:chemicalFormula="C21H26N7O14P2">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_nad_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:57540"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00003"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_h2o_mito" sboTerm="SBO:0000247" id="h2o_mito" name="H20" compartment="mito" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="H2O">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_h2o_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15378"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00080"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:18276"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00282"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15377"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00001"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="meta_h_mito" sboTerm="SBO:0000247" id="h_mito" name="H+" compartment="mito" initialConcentration="0" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="1" fbc:chemicalFormula="H">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#meta_h_mito">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000247"/>
+                  <rdf:li rdf:resource="https://identifiers.org/chebi/CHEBI:15378"/>
+                  <rdf:li rdf:resource="https://identifiers.org/kegg.compound/C00080"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
     </listOfSpecies>
     <listOfParameters>
       <parameter id="scale" name="scaling factor for rates" value="1" units="dimensionless" constant="true"/>
@@ -407,55 +1257,6 @@
       <parameter id="x_epi4" value="8.4" units="dimensionless" constant="true"/>
       <parameter id="K_val" value="0.1" units="dimensionless" constant="true"/>
       <parameter id="epi_f" value="0.8" units="dimensionless" constant="true"/>
-      <parameter id="atp" name="ATP concentration" units="mM" constant="false"/>
-      <parameter id="adp" name="ADP concentration" units="mM" constant="false"/>
-      <parameter id="amp" name="AMP concentration" units="mM" constant="false"/>
-      <parameter id="utp" name="UTP concentration" units="mM" constant="false"/>
-      <parameter id="udp" name="UDP concentration" units="mM" constant="false"/>
-      <parameter id="gtp" name="GTP concentration" units="mM" constant="false"/>
-      <parameter id="gdp" name="GDP concentration" units="mM" constant="false"/>
-      <parameter id="nad" name="NAD+ concentration" units="mM" constant="false"/>
-      <parameter id="nadh" name="NADH concentration" units="mM" constant="false"/>
-      <parameter id="phos" name="phosphate concentration" units="mM" constant="false"/>
-      <parameter id="pp" name="pyrophosphate concentration" units="mM" constant="false"/>
-      <parameter id="co2" name="CO2 concentration" units="mM" constant="false"/>
-      <parameter id="h2o" name="H2O concentration" units="mM" constant="false"/>
-      <parameter id="h" name="H+ concentration" units="mM" constant="false"/>
-      <parameter id="glc1p" name="glucose-1 phosphate concentration" units="mM" constant="false"/>
-      <parameter id="udpglc" name="UDP-glucose concentration" units="mM" constant="false"/>
-      <parameter id="glyglc" name="glycogen concentration" units="mM" constant="false"/>
-      <parameter id="glc" name="glucose concentration" units="mM" constant="false"/>
-      <parameter id="glc6p" name="glucose-6 phosphate concentration" units="mM" constant="false"/>
-      <parameter id="fru6p" name="fructose-6 phosphate concentration" units="mM" constant="false"/>
-      <parameter id="fru16bp" name="fructose-16 bisphosphate concentration" units="mM" constant="false"/>
-      <parameter id="fru26bp" name="fructose-26 bisphosphate concentration" units="mM" constant="false"/>
-      <parameter id="grap" name="glyceraldehyde 3-phosphate concentration" units="mM" constant="false"/>
-      <parameter id="dhap" name="dihydroxyacetone phosphate concentration" units="mM" constant="false"/>
-      <parameter id="bpg13" name="13-bisphospho-glycerate concentration" units="mM" constant="false"/>
-      <parameter id="pg3" name="3-phosphoglycerate concentration" units="mM" constant="false"/>
-      <parameter id="pg2" name="2-phosphoglycerate concentration" units="mM" constant="false"/>
-      <parameter id="pep" name="phosphoenolpyruvate concentration" units="mM" constant="false"/>
-      <parameter id="pyr" name="pyruvate concentration" units="mM" constant="false"/>
-      <parameter id="oaa" name="oxaloacetate concentration" units="mM" constant="false"/>
-      <parameter id="lac" name="lactate concentration" units="mM" constant="false"/>
-      <parameter id="glc_ext" name="glucose concentration" units="mM" constant="false"/>
-      <parameter id="lac_ext" name="lactate concentration" units="mM" constant="false"/>
-      <parameter id="co2_mito" name="CO2 concentration" units="mM" constant="false"/>
-      <parameter id="phos_mito" name="phosphate concentration" units="mM" constant="false"/>
-      <parameter id="oaa_mito" name=" oxaloacetate concentration" units="mM" constant="false"/>
-      <parameter id="pep_mito" name="phosphoenolpyruvate concentration" units="mM" constant="false"/>
-      <parameter id="acoa_mito" name="acetyl-coenzyme A concentration" units="mM" constant="false"/>
-      <parameter id="pyr_mito" name="pyruvate concentration" units="mM" constant="false"/>
-      <parameter id="cit_mito" name="citrate concentration" units="mM" constant="false"/>
-      <parameter id="atp_mito" name="ATP concentration" units="mM" constant="false"/>
-      <parameter id="adp_mito" name="ADP concentration" units="mM" constant="false"/>
-      <parameter id="gtp_mito" name="GTP concentration" units="mM" constant="false"/>
-      <parameter id="gdp_mito" name="GDP concentration" units="mM" constant="false"/>
-      <parameter id="coa_mito" name="coenzyme A concentration" units="mM" constant="false"/>
-      <parameter id="nadh_mito" name="NADH concentration" units="mM" constant="false"/>
-      <parameter id="nad_mito" name="NAD+ concentration" units="mM" constant="false"/>
-      <parameter id="h2o_mito" name="H20 concentration" units="mM" constant="false"/>
-      <parameter id="h_mito" name="H+ concentration" units="mM" constant="false"/>
       <parameter id="V_mito" name="mitochondrial volume" units="m3" constant="false"/>
       <parameter id="flux_conversion" units="mumole_per_mmole_kg" constant="false"/>
       <parameter id="f_gly" name="scaling factor glycolysis" units="dimensionless" constant="false"/>
@@ -2662,447 +3463,6 @@
           <ci> V_mito </ci>
         </math>
       </assignmentRule>
-      <assignmentRule variable="atp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aatp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="adp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aadp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="amp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aamp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="utp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Autp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="udp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Audp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="gtp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Agtp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="gdp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Agdp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="nad">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Anad </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="nadh">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Anadh </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="phos">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aphos </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> App </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="co2">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aco2 </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="h2o">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Ah2o </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="h">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Ah </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="glc1p">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aglc1p </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="udpglc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Audpglc </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="glyglc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aglyglc </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="glc">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aglc </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="glc6p">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aglc6p </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="fru6p">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Afru6p </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="fru16bp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Afru16bp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="fru26bp">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Afru26bp </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="grap">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Agrap </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="dhap">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Adhap </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="bpg13">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Abpg13 </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pg3">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apg3 </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pg2">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apg2 </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pep">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apep </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pyr">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apyr </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="oaa">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aoaa </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="lac">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Alac </ci>
-            <ci> cyto </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="glc_ext">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aglc_ext </ci>
-            <ci> ext </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="lac_ext">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Alac_ext </ci>
-            <ci> ext </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="co2_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aco2_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="phos_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aphos_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="oaa_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aoaa_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pep_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apep_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="acoa_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aacoa_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="pyr_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Apyr_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="cit_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Acit_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="atp_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aatp_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="adp_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Aadp_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="gtp_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Agtp_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="gdp_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Agdp_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="coa_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Acoa_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="nadh_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Anadh_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="nad_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Anad_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="h2o_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Ah2o_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
-      <assignmentRule variable="h_mito">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <divide/>
-            <ci> Ah_mito </ci>
-            <ci> mito </ci>
-          </apply>
-        </math>
-      </assignmentRule>
       <assignmentRule variable="V_mito">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <apply>
@@ -3377,10 +3737,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_dffe34daa438490bb6b13e9e52341241" sboTerm="SBO:0000359" variable="nadh_tot">
+      <assignmentRule metaid="meta_b51605c594bd4e39a155e16f576f20dc" sboTerm="SBO:0000359" variable="nadh_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_dffe34daa438490bb6b13e9e52341241">
+            <rdf:Description rdf:about="#meta_b51605c594bd4e39a155e16f576f20dc">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3397,10 +3757,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_be23b63f5ae3483daa578d4f6dc983fc" sboTerm="SBO:0000359" variable="atp_tot">
+      <assignmentRule metaid="meta_c9f05a5120c84959a9fe27647f22d58b" sboTerm="SBO:0000359" variable="atp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_be23b63f5ae3483daa578d4f6dc983fc">
+            <rdf:Description rdf:about="#meta_c9f05a5120c84959a9fe27647f22d58b">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3418,10 +3778,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_6a4754523c6f405d8ab17c19477f4b24" sboTerm="SBO:0000359" variable="utp_tot">
+      <assignmentRule metaid="meta_1808f4d18b604a0e89b1db58201d7204" sboTerm="SBO:0000359" variable="utp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_6a4754523c6f405d8ab17c19477f4b24">
+            <rdf:Description rdf:about="#meta_1808f4d18b604a0e89b1db58201d7204">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3439,10 +3799,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_7175963f744143429e507e69ee0a4f54" sboTerm="SBO:0000359" variable="gtp_tot">
+      <assignmentRule metaid="meta_a53e1c14204b411491cfc2b5e31bc29d" sboTerm="SBO:0000359" variable="gtp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_7175963f744143429e507e69ee0a4f54">
+            <rdf:Description rdf:about="#meta_a53e1c14204b411491cfc2b5e31bc29d">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3459,10 +3819,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_81014761e6d44b91ae7b0b459e2e4ee6" sboTerm="SBO:0000359" variable="nadh_mito_tot">
+      <assignmentRule metaid="meta_9f12986d0e1e4876be803369e7bb05b2" sboTerm="SBO:0000359" variable="nadh_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_81014761e6d44b91ae7b0b459e2e4ee6">
+            <rdf:Description rdf:about="#meta_9f12986d0e1e4876be803369e7bb05b2">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3479,10 +3839,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_a45581d8c8d44ddc846ad483865d9a69" sboTerm="SBO:0000359" variable="atp_mito_tot">
+      <assignmentRule metaid="meta_bac33172a0404ee8b85e9aa697235c80" sboTerm="SBO:0000359" variable="atp_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_a45581d8c8d44ddc846ad483865d9a69">
+            <rdf:Description rdf:about="#meta_bac33172a0404ee8b85e9aa697235c80">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3499,10 +3859,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_230ca4331732487b8793060c6cc9a032" sboTerm="SBO:0000359" variable="gtp_mito_tot">
+      <assignmentRule metaid="meta_4f909a13fcd141e6b365d6651f2da16a" sboTerm="SBO:0000359" variable="gtp_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_230ca4331732487b8793060c6cc9a032">
+            <rdf:Description rdf:about="#meta_4f909a13fcd141e6b365d6651f2da16a">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -4412,10 +4772,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc_ext" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc_ext" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aglc" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4474,17 +4834,17 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aglc6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Aglc1p"/>
-          <modifierSpeciesReference species="Afru6p"/>
+          <modifierSpeciesReference species="glc1p"/>
+          <modifierSpeciesReference species="fru6p"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4544,12 +4904,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aglc" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4587,10 +4947,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc6p" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Afru6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru6p" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4650,10 +5010,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc1p" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc1p" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aglc6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc6p" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4712,13 +5072,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglc1p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
-          <speciesReference species="Autp" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc1p" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
+          <speciesReference species="utp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="App" stoichiometry="1" constant="true"/>
-          <speciesReference species="Audpglc" stoichiometry="1" constant="true"/>
+          <speciesReference species="pp" stoichiometry="1" constant="true"/>
+          <speciesReference species="udpglc" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4827,12 +5187,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="App" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="pp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="2" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="2" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4873,16 +5233,16 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Audpglc" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="udpglc" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Audp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aglyglc" stoichiometry="1" constant="true"/>
+          <speciesReference species="udp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
+          <speciesReference species="glyglc" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Aglc6p"/>
+          <modifierSpeciesReference species="glc6p"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4926,17 +5286,17 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aglyglc" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="1" constant="true"/>
+          <speciesReference species="glyglc" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aglc1p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="glc1p" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Aphos"/>
-          <modifierSpeciesReference species="Aamp"/>
-          <modifierSpeciesReference species="Aglc"/>
+          <modifierSpeciesReference species="phos"/>
+          <modifierSpeciesReference species="amp"/>
+          <modifierSpeciesReference species="glc"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -4976,12 +5336,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agdp" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
+          <speciesReference species="gdp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agtp" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="gtp" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5089,12 +5449,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Audp" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
+          <speciesReference species="udp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Autp" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="utp" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5202,11 +5562,11 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aamp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
+          <speciesReference species="amp" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aadp" stoichiometry="2" constant="true"/>
+          <speciesReference species="adp" stoichiometry="2" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5315,13 +5675,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Afru6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Afru26bp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru26bp" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5362,12 +5722,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Afru26bp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru26bp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Afru6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5408,16 +5768,16 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Afru6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Afru16bp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru16bp" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Afru26bp"/>
+          <modifierSpeciesReference species="fru26bp"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5492,15 +5852,15 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Afru16bp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru16bp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Afru6p" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru6p" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Afru26bp"/>
+          <modifierSpeciesReference species="fru26bp"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5553,11 +5913,11 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Afru16bp" stoichiometry="1" constant="true"/>
+          <speciesReference species="fru16bp" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Agrap" stoichiometry="1" constant="true"/>
-          <speciesReference species="Adhap" stoichiometry="1" constant="true"/>
+          <speciesReference species="grap" stoichiometry="1" constant="true"/>
+          <speciesReference species="dhap" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5653,10 +6013,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Adhap" stoichiometry="1" constant="true"/>
+          <speciesReference species="dhap" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Agrap" stoichiometry="1" constant="true"/>
+          <speciesReference species="grap" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5718,14 +6078,14 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Agrap" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anad" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos" stoichiometry="1" constant="true"/>
+          <speciesReference species="grap" stoichiometry="1" constant="true"/>
+          <speciesReference species="nad" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Abpg13" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anadh" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="bpg13" stoichiometry="1" constant="true"/>
+          <speciesReference species="nadh" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5849,12 +6209,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Abpg13" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="bpg13" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Apg3" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
+          <speciesReference species="pg3" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -5967,10 +6327,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apg3" stoichiometry="1" constant="true"/>
+          <speciesReference species="pg3" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Apg2" stoichiometry="1" constant="true"/>
+          <speciesReference species="pg2" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6030,11 +6390,11 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apg2" stoichiometry="1" constant="true"/>
+          <speciesReference species="pg2" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Ah2o" stoichiometry="1" constant="true"/>
-          <speciesReference species="Apep" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6092,16 +6452,16 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apep" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aadp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Apyr" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aatp" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Afru16bp"/>
+          <modifierSpeciesReference species="fru16bp"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6142,13 +6502,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Agtp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aoaa" stoichiometry="1" constant="true"/>
+          <speciesReference species="gtp" stoichiometry="1" constant="true"/>
+          <speciesReference species="oaa" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aco2" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agdp" stoichiometry="1" constant="true"/>
-          <speciesReference species="Apep" stoichiometry="1" constant="true"/>
+          <speciesReference species="co2" stoichiometry="1" constant="true"/>
+          <speciesReference species="gdp" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6267,13 +6627,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Agtp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aoaa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="gtp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="oaa_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aco2_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agdp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Apep_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="co2_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="gdp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6396,19 +6756,19 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aatp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Apyr_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aco2_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="co2_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aadp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aoaa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aphos_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="2" constant="true"/>
+          <speciesReference species="adp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="oaa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="phos_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="2" constant="true"/>
         </listOfProducts>
         <listOfModifiers>
-          <modifierSpeciesReference species="Aacoa_mito"/>
+          <modifierSpeciesReference species="acoa_mito"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -6496,13 +6856,13 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apyr" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anadh" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr" stoichiometry="1" constant="true"/>
+          <speciesReference species="nadh" stoichiometry="1" constant="true"/>
+          <speciesReference species="h" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Alac" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anad" stoichiometry="1" constant="true"/>
+          <speciesReference species="lac" stoichiometry="1" constant="true"/>
+          <speciesReference species="nad" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6607,10 +6967,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Alac_ext" stoichiometry="1" constant="true"/>
+          <speciesReference species="lac_ext" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Alac" stoichiometry="1" constant="true"/>
+          <speciesReference species="lac" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6668,10 +7028,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apyr" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Apyr_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6729,10 +7089,10 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apep_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Apep" stoichiometry="1" constant="true"/>
+          <speciesReference species="pep" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6798,14 +7158,14 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Apyr_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Acoa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anad_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="pyr_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="coa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="nad_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aacoa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aco2_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Anadh_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="acoa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="co2_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="nadh_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6846,14 +7206,14 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aacoa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Aoaa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah2o_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="acoa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="oaa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="h2o_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Acit_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Acoa_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Ah_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="cit_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="coa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="h_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -6960,12 +7320,12 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference species="Aatp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agdp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="atp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="gdp_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="Aadp_mito" stoichiometry="1" constant="true"/>
-          <speciesReference species="Agtp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="adp_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="gtp_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
@@ -7059,7 +7419,7 @@
       </reaction>
       <reaction id="OAAFLX" name="oxalacetate influx" reversible="false" fast="false" compartment="mito">
         <listOfProducts>
-          <speciesReference species="Aoaa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="oaa_mito" stoichiometry="1" constant="true"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -7073,7 +7433,7 @@
       </reaction>
       <reaction id="ACOAFLX" name="acetyl-coa efflux" reversible="false" fast="false" compartment="mito">
         <listOfReactants>
-          <speciesReference species="Aacoa_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="acoa_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -7087,7 +7447,7 @@
       </reaction>
       <reaction id="CITFLX" name="citrate efflux" reversible="false" fast="false" compartment="mito">
         <listOfReactants>
-          <speciesReference species="Acit_mito" stoichiometry="1" constant="true"/>
+          <speciesReference species="cit_mito" stoichiometry="1" constant="true"/>
         </listOfReactants>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -7101,33 +7461,20 @@
       </reaction>
     </listOfReactions>
     <comp:listOfPorts>
-      <comp:port metaid="l_port" sboTerm="SBO:0000599" comp:unitRef="l" comp:id="l_port" comp:name="l_port"/>
       <comp:port metaid="s_port" sboTerm="SBO:0000599" comp:unitRef="s" comp:id="s_port" comp:name="s_port"/>
+      <comp:port metaid="min_port" sboTerm="SBO:0000599" comp:unitRef="min" comp:id="min_port" comp:name="min_port"/>
       <comp:port metaid="kg_port" sboTerm="SBO:0000599" comp:unitRef="kg" comp:id="kg_port" comp:name="kg_port"/>
       <comp:port metaid="m_port" sboTerm="SBO:0000599" comp:unitRef="m" comp:id="m_port" comp:name="m_port"/>
       <comp:port metaid="m2_port" sboTerm="SBO:0000599" comp:unitRef="m2" comp:id="m2_port" comp:name="m2_port"/>
       <comp:port metaid="m3_port" sboTerm="SBO:0000599" comp:unitRef="m3" comp:id="m3_port" comp:name="m3_port"/>
-      <comp:port metaid="per_s_port" sboTerm="SBO:0000599" comp:unitRef="per_s" comp:id="per_s_port" comp:name="per_s_port"/>
-      <comp:port metaid="min_port" sboTerm="SBO:0000599" comp:unitRef="min" comp:id="min_port" comp:name="min_port"/>
-      <comp:port metaid="s_per_min_port" sboTerm="SBO:0000599" comp:unitRef="s_per_min" comp:id="s_per_min_port" comp:name="s_per_min_port"/>
       <comp:port metaid="mmole_port" sboTerm="SBO:0000599" comp:unitRef="mmole" comp:id="mmole_port" comp:name="mmole_port"/>
       <comp:port metaid="mM_port" sboTerm="SBO:0000599" comp:unitRef="mM" comp:id="mM_port" comp:name="mM_port"/>
-      <comp:port metaid="per_mM_port" sboTerm="SBO:0000599" comp:unitRef="per_mM" comp:id="per_mM_port" comp:name="per_mM_port"/>
-      <comp:port metaid="mM2_port" sboTerm="SBO:0000599" comp:unitRef="mM2" comp:id="mM2_port" comp:name="mM2_port"/>
-      <comp:port metaid="pmol_port" sboTerm="SBO:0000599" comp:unitRef="pmol" comp:id="pmol_port" comp:name="pmol_port"/>
-      <comp:port metaid="pM_port" sboTerm="SBO:0000599" comp:unitRef="pM" comp:id="pM_port" comp:name="pM_port"/>
-      <comp:port metaid="mmole_per_min_port" sboTerm="SBO:0000599" comp:unitRef="mmole_per_min" comp:id="mmole_per_min_port" comp:name="mmole_per_min_port"/>
-      <comp:port metaid="mumole_per_mmole_port" sboTerm="SBO:0000599" comp:unitRef="mumole_per_mmole" comp:id="mumole_per_mmole_port" comp:name="mumole_per_mmole_port"/>
-      <comp:port metaid="mumole_per_mmole_kg_port" sboTerm="SBO:0000599" comp:unitRef="mumole_per_mmole_kg" comp:id="mumole_per_mmole_kg_port" comp:name="mumole_per_mmole_kg_port"/>
-      <comp:port metaid="mumol_per_min_kg_port" sboTerm="SBO:0000599" comp:unitRef="mumol_per_min_kg" comp:id="mumol_per_min_kg_port" comp:name="mumol_per_min_kg_port"/>
-      <comp:port metaid="mg_port" sboTerm="SBO:0000599" comp:unitRef="mg" comp:id="mg_port" comp:name="mg_port"/>
-      <comp:port metaid="ml_port" sboTerm="SBO:0000599" comp:unitRef="ml" comp:id="ml_port" comp:name="ml_port"/>
+      <comp:port metaid="per_s_port" sboTerm="SBO:0000599" comp:unitRef="per_s" comp:id="per_s_port" comp:name="per_s_port"/>
       <comp:port metaid="per_min_port" sboTerm="SBO:0000599" comp:unitRef="per_min" comp:id="per_min_port" comp:name="per_min_port"/>
-      <comp:port metaid="mmole_per_min_l_port" sboTerm="SBO:0000599" comp:unitRef="mmole_per_min_l" comp:id="mmole_per_min_l_port" comp:name="mmole_per_min_l_port"/>
       <comp:port metaid="ext_port" sboTerm="SBO:0000599" comp:idRef="ext" comp:id="ext_port" comp:name="ext_port"/>
       <comp:port metaid="cyto_port" sboTerm="SBO:0000599" comp:idRef="cyto" comp:id="cyto_port" comp:name="cyto_port"/>
-      <comp:port metaid="Aglc_ext_port" sboTerm="SBO:0000599" comp:idRef="Aglc_ext" comp:id="Aglc_ext_port" comp:name="Aglc_ext_port"/>
-      <comp:port metaid="Alac_ext_port" sboTerm="SBO:0000599" comp:idRef="Alac_ext" comp:id="Alac_ext_port" comp:name="Alac_ext_port"/>
+      <comp:port metaid="glc_ext_port" sboTerm="SBO:0000599" comp:idRef="glc_ext" comp:id="glc_ext_port" comp:name="glc_ext_port"/>
+      <comp:port metaid="lac_ext_port" sboTerm="SBO:0000599" comp:idRef="lac_ext" comp:id="lac_ext_port" comp:name="lac_ext_port"/>
     </comp:listOfPorts>
   </model>
 </sbml>

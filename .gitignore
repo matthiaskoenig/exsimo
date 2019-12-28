@@ -2,5 +2,5 @@
 *.pyc
 *.log
 pyexsimo.egg-info/
-.xlsx#
+*.xlsx#
 
