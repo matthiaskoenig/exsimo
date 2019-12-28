@@ -1,24 +1,18 @@
-# exesimo
-Python package for executable simulation model of the liver.
+# `exsimo` - Executable simulation model of the liver
+Data, model and code for model of hepatic glucose metabolism.
 
 * `data` - data sets
 * `docs` - documentation
-* `models` - latest model versions
-* `notebooks` - Jupyter notebooks
-* `pyexesimo` - python package for executable simulation models 
+* `models` - SBML model and model report
+* `pyexsimo` - python package 
 
 ## Installation
 
 ### virtualenv
-Create virtual environment with `virtualenv` & `virtualenvwrapper`.
+Create virtual environment with `python3.6`, e.g., with `virtualenv` & `virtualenvwrapper` via
 ```
 mkvirtualenv exsimo --python=python3.6
 ```
-If this is not working use
-```
-which python3.6
-```
-to find the path to python and use it in the command above.
 
 Install latest `sbmlutils` and `sbmlsim`
 ```bash
@@ -35,6 +29,6 @@ cd sbmlsim
 git clone https://github.com/matthiaskoenig/exsimo.git
 cd exsimo
 (exsimo) pip install -e . --upgrade
-
+```
 ----
 &copy; 2019 Matthias König.
