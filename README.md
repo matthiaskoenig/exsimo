@@ -30,5 +30,11 @@ git clone https://github.com/matthiaskoenig/exsimo.git
 cd exsimo
 (exsimo) pip install -e . --upgrade
 ```
+
+To work with notebooks
+```bash
+(exsimo) pip install jupyterlab
+(exsimo) python -m ipykernel install --user --name=exismo
+```
 ----
 &copy; 2019 Matthias König.
