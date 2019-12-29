@@ -1,5 +1,6 @@
-# `exsimo` - Executable simulation model of the liver
-Data, model and code for model of hepatic glucose metabolism.
+<h1><img alt="sbmlutils logo" src="./docs/images/exsimo_logo_200.png" height="150" /> EXSIMO: EXecutable SImulation MOdel</h1>
+
+Data, model and code for executable simulation model of hepatic glucose metabolism.
 
 * `data` - data sets
 * `docs` - documentation
