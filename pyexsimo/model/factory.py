@@ -9,7 +9,7 @@ def create_liver_glucose():
         modules=['liver_glucose'],
         filename="liver_glucose.xml",
         target_dir=MODEL_PATH,
-        annotations=os.path.join(os.path.dirname(__file__), 'liver_model_detailed.xlsx'),
+        annotations=os.path.join(os.path.dirname(__file__), 'liver_glucose_annotations.xlsx'),
         create_report=True
     )
 
