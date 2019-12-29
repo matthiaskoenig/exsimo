@@ -869,7 +869,7 @@ PGM = Reaction(
 
 EN = Reaction(
     sid='EN',
-    name='2-Phospho-D-glucerate hydro-lyase (enolase)',
+    name='2-Phospho-D-glycerate hydro-lyase (enolase)',
     equation='pg2 <-> h2o + pep []',
     # C3H4O7P (-3) <-> H2O (0) + C3H2O6P (-3)
     compartment='cyto',
@@ -881,8 +881,10 @@ EN = Reaction(
         Parameter('EN_Vmax', 35.994, 'mmole_per_min'),
     ],
     formula=(
-    'f_gly * EN_Vmax * (pg2 - pep/EN_keq) / (pg2 + EN_k_pg2 *(1 dimensionless + pep/EN_k_pep))',
-    'mmole_per_min')
+        'f_gly * EN_Vmax * (pg2 - pep/EN_keq) '
+        '/ (pg2 + EN_k_pg2 *(1 dimensionless + pep/EN_k_pep))',
+        'mmole_per_min'
+    )
 )
 
 PK = Reaction(
