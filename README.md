@@ -1,4 +1,4 @@
-<h1><img alt="sbmlutils logo" src="./docs/images/exsimo_logo_200.png" height="150" /> EXSIMO: EXecutable SImulation MOdel</h1>
+<h1><img alt="EXSIMO logo" src="./docs/images/exsimo_logo_200.png" height="150" /> EXSIMO: EXecutable SImulation MOdel</h1>
 
 Data, model and code for executable simulation model of hepatic glucose metabolism.
 
