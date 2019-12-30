@@ -1,0 +1,6 @@
+{
+  "experiment_id": "DoseResponseExperiment",
+  "model_path": "/home/mkoenig/git/exsimo/models/liver_glucose.xml",
+  "data_path": "/home/mkoenig/git/exsimo/data",
+  "simulations": {}
+}

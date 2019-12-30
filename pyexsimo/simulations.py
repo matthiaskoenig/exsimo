@@ -8,7 +8,7 @@ from pyexsimo.experiments.hgp_gng_gly import PathwayExperiment
 logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
-    for exp_class in [PathwayExperiment]:
+    for exp_class in [DoseResponseExperiment, PathwayExperiment]:
         run_experiment(exp_class,
                        output_path=RESULT_PATH,
                        model_path=MODEL_PATH / "liver_glucose.xml",
