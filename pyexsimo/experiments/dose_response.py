@@ -1,11 +1,14 @@
 from typing import Dict
 from matplotlib.pyplot import Figure
+import numpy as np
+import pandas as pd
 
 from sbmlsim.experiment import SimulationExperiment
 from sbmlsim.data import DataSet
-from sbmlsim.timecourse import Timecourse, TimecourseSim
+from sbmlsim.timecourse import Timecourse, TimecourseSim, TimecourseScan
 from sbmlsim.plotting_matplotlib import add_data, add_line, plt
 from sbmlsim.pkpd import pkpd
+
 
 
 class DoseResponseExperiment(SimulationExperiment):
@@ -48,15 +51,8 @@ class DoseResponseExperiment(SimulationExperiment):
                 df.loc[df.reference.isin(glu_clamp_studies), 'mean'] = insulin_supression * df[df.reference.isin(glu_clamp_studies)]['mean']
                 df.loc[df.reference.isin(glu_clamp_studies), 'se'] = insulin_supression * df[df.reference.isin(glu_clamp_studies)]['se']
 
-
             elif hormone_key == "Insulin":
                 df = df[df.reference.isin(ins_normal_studies)]
-
-            # correct glucagon data for insulin_suppression
-            # insulin_supression = 3.4
-            # glu_corrected = [
-            #
-            # ]
 
             udict = {
                 'glc': df["glc_unit"].unique()[0],
@@ -65,6 +61,19 @@ class DoseResponseExperiment(SimulationExperiment):
             dsets[hormone_key.lower()] = DataSet.from_df(df, udict=udict, ureg=self.ureg)
 
         return dsets
+
+    @property
+    def scans(self) -> Dict[str, TimecourseScan]:
+        Q_ = self.ureg.Quantity
+        glc_scan = TimecourseScan(
+            tcsim=TimecourseSim([
+                Timecourse(start=0, end=1, steps=1, changes={})
+            ]),
+            scan={'[glc_ext]': Q_(np.linspace(2, 20, num=100), 'mM')},
+        )
+        return {
+            "glc_scan": glc_scan
+        }
 
     @property
     def simulations(self) -> Dict[str, TimecourseSim]:
@@ -81,21 +90,43 @@ class DoseResponseExperiment(SimulationExperiment):
         f.subplots_adjust(wspace=.3, hspace=.3)
         axes = (ax1, ax2, ax3, ax4)
 
-        # simulation
-        '''
-        ax1.plot(glc_ext_vec, dose_response['glu'], color="black")
-        ax2.plot(glc_ext_vec, dose_response['epi'], color="black",
-                 linewidth=2.0)
-        ax3.plot(glc_ext_vec, dose_response['ins'], color="black",
-                 linewidth=2.0)
-        ax4.plot(glc_ext_vec, dose_response['gamma'], color="black",
-                 linewidth=2.0)
-        '''
+        # simulation (process results)
+        tcscan = self.scans["glc_scan"]
+        glc_vec = tcscan.scan['[glc_ext]']
+        results = self.scan_results["glc_scan"]  # type: Result
+
+        # result vectors
+        dose_response = {k: list() for k in ["glu", "epi", "ins", "gamma"]}
+        for k, glc_ext in enumerate(glc_vec):
+            s = results.frames[k]
+            # store results
+            for key in dose_response:
+                value = s[key].values[0]  # initial value calculated
+                dose_response[key].append(value)
+
+        dose_response['[glc_ext]'] = glc_vec
+        df = pd.DataFrame(dose_response)
+        dset = DataSet.from_df(df, udict=self.udict, ureg=self.ureg)
+        kwargs = {
+            'linewidth': 2,
+            'linestyle': '-',
+            'marker': 'None',
+            'color': 'black'
+        }
+        add_data(ax1, dset, xid="[glc_ext]", yid="glu",
+                 xunit=xunit, yunit=yunit_hormone, **kwargs)
+        add_data(ax2, dset, xid="[glc_ext]", yid="epi",
+                 xunit=xunit, yunit=yunit_hormone, **kwargs)
+        add_data(ax3, dset, xid="[glc_ext]", yid="ins",
+                 xunit=xunit, yunit=yunit_hormone, **kwargs)
+        add_data(ax4, dset, xid="[glc_ext]", yid="gamma",
+                 xunit=xunit, yunit=yunit_gamma, **kwargs)
 
         # experimental data
         kwargs = {
             'color': "black",
             'linestyle': "None",
+            'alpha': 0.6,
         }
         add_data(ax1, self.datasets["glucagon"], xid="glc", yid="mean", yid_se="se",
                  xunit=xunit, yunit=yunit_hormone, label="Glucagon", **kwargs)

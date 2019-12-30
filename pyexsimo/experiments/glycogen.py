@@ -1,5 +1,6 @@
 from typing import Dict
 from matplotlib.pyplot import Figure
+import numpy as np
 
 from sbmlsim.experiment import SimulationExperiment
 from sbmlsim.data import DataSet
@@ -24,6 +25,33 @@ class GlycogenExperiment(SimulationExperiment):
 
     @property
     def simulations(self) -> Dict[str, TimecourseSim]:
+        Q_ = self.ureg.Quantity
+
+        # --- glycogenolysis ---
+        glc_ext_GLY = np.linspace(3.6, 5.0, num=8)  # [mM]
+
+        for glc_ext in glc_ext_GLY:
+            # TODO: 1D parameter scan (time courses)
+            tc_sim = TimecourseSim([
+                Timecourse(start=0, end=65*60, steps=600,
+                           changes={
+                               '[glyglc]': Q_(500, "mM"),
+                               '[glc_ext]': Q_(glc_ext, "mM"),
+                           })
+            ])
+
+        # --- glycogen synthesis ---
+        glc_ext_GS = np.linspace(5.5, 8.0, num=6)  # [mM]
+        for glc_ext in glc_ext_GS:
+            tc_sim = TimecourseSim([
+                Timecourse(start=0, end=300, steps=600,
+                           changes={
+                               '[glyglc]': Q_(200, "mM"),
+                               '[glc_ext]': Q_(glc_ext, "mM"),
+                           })
+            ])
+
+
         return {}
 
     @property
