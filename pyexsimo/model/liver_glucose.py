@@ -364,11 +364,11 @@ rules = [
                    name='GTP mito balance'),
 
     # whole liver output
-    AssignmentRule('HGP', 'GLUT2 * flux_conversion', 'mumol_per_min_kg',
+    AssignmentRule('HGP', '-GLUT2 * flux_conversion', 'mumol_per_min_kg',
                    name='hepatic glucose production/utilization'),
-    AssignmentRule('GNG', 'GPI * flux_conversion', 'mumol_per_min_kg',
+    AssignmentRule('GNG', '-GPI * flux_conversion', 'mumol_per_min_kg',
                    name='gluconeogenesis/glycolysis'),
-    AssignmentRule('GLY', '-G16PI * flux_conversion', 'mumol_per_min_kg',
+    AssignmentRule('GLY', 'G16PI * flux_conversion', 'mumol_per_min_kg',
                    name='glycogenolysis/glycogen synthesis'),
 ]
 

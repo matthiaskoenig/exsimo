@@ -449,7 +449,7 @@
         <!--------------------------------------------------->
         <a class="anchor" id="anchor_model"></a>
         <h1 id="model"><a href="liver_glucose.xml" target="_blank" alt="Access SBML model" title="SBML model"><i class="fas fa-file-code"></i></a>&nbsp;Model : liver_glucose_8</h1>
-        <b>Creator</b><br />Matthias, Koenig, Humboldt-University Berlin, Institute for Theoretical Biology, <a href="mailto:koenigmx@hu-berlin.de" target="_blank">koenigmx@hu-berlin.de</a><br /><b>Created:</b> 2019-12-29 20:48<br /><b>Modified:</b> 2019-12-29 20:48<br /><br />
+        <b>Creator</b><br />Matthias, Koenig, Humboldt-University Berlin, Institute for Theoretical Biology, <a href="mailto:koenigmx@hu-berlin.de" target="_blank">koenigmx@hu-berlin.de</a><br /><b>Created:</b> 2019-12-30 22:30<br /><b>Modified:</b> 2019-12-30 22:30<br /><br />
         <table id="table_model" class="table table-condensed table-nonfluid">
             <tr>
             <td>
@@ -7097,7 +7097,10 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <ci> GLUT2 </ci>
+    <apply>
+      <minus/>
+      <ci> GLUT2 </ci>
+    </apply>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -7150,7 +7153,10 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <ci> GPI </ci>
+    <apply>
+      <minus/>
+      <ci> GPI </ci>
+    </apply>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -7203,10 +7209,7 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <apply>
-      <minus/>
-      <ci> G16PI </ci>
-    </apply>
+    <ci> G16PI </ci>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -18025,11 +18028,11 @@
             <tbody>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="cyto" class="active"><span class="package">cyto</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-69060d71bf504d5f822afb891f7178e1"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-69060d71bf504d5f822afb891f7178e1" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-48f7a6dcd71e4f93a46d136c697351f9"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-48f7a6dcd71e4f93a46d136c697351f9" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">69060d71bf504d5f822afb891f7178e1</h4></div>
+            <div class="modal-header"><h4 class="modal-title">48f7a6dcd71e4f93a46d136c697351f9</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="cyto">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <ci> V_cyto </ci>
@@ -18056,11 +18059,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="mito" class="active"><span class="package">mito</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-a1bcf28039ec4c7c8dda279de8032fbb"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-a1bcf28039ec4c7c8dda279de8032fbb" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-b74763ad0b024034bcee847bc65737a4"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-b74763ad0b024034bcee847bc65737a4" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">a1bcf28039ec4c7c8dda279de8032fbb</h4></div>
+            <div class="modal-header"><h4 class="modal-title">b74763ad0b024034bcee847bc65737a4</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="mito">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <ci> V_mito </ci>
@@ -18091,11 +18094,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="V_mito" class="active"><span class="package">V_mito</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-175445bdf898497692258d1653ea50c2"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-175445bdf898497692258d1653ea50c2" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-86e1c2015769494e8699a77604fd5c46"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-86e1c2015769494e8699a77604fd5c46" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">175445bdf898497692258d1653ea50c2</h4></div>
+            <div class="modal-header"><h4 class="modal-title">86e1c2015769494e8699a77604fd5c46</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="V_mito">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18130,11 +18133,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="flux_conversion" class="active"><span class="package">flux_conversion</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-86b9504785524b51a524a41991a1530d"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-86b9504785524b51a524a41991a1530d" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-70beae08fd9a4fa28835341af0af9e0d"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-70beae08fd9a4fa28835341af0af9e0d" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">86b9504785524b51a524a41991a1530d</h4></div>
+            <div class="modal-header"><h4 class="modal-title">70beae08fd9a4fa28835341af0af9e0d</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="flux_conversion">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18177,11 +18180,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="f_gly" class="active"><span class="package">f_gly</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f709d9c34c184ba0aff4e67e186a05a0"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-f709d9c34c184ba0aff4e67e186a05a0" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-4068fcdc93a14610ab8e84c4d09241e1"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-4068fcdc93a14610ab8e84c4d09241e1" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">f709d9c34c184ba0aff4e67e186a05a0</h4></div>
+            <div class="modal-header"><h4 class="modal-title">4068fcdc93a14610ab8e84c4d09241e1</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="f_gly">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <ci> scale </ci>
@@ -18205,11 +18208,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="f_glyglc" class="active"><span class="package">f_glyglc</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c66bd17ddf82434f8899f682d8935cc2"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-c66bd17ddf82434f8899f682d8935cc2" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-e34b4592286943869023c1cc066e1a8c"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-e34b4592286943869023c1cc066e1a8c" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">c66bd17ddf82434f8899f682d8935cc2</h4></div>
+            <div class="modal-header"><h4 class="modal-title">e34b4592286943869023c1cc066e1a8c</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="f_glyglc">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <ci> scale </ci>
@@ -18233,11 +18236,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="ins" class="active"><span class="package">ins</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-9e0b789c25fe4ec5ae39063fd2e002d4"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-9e0b789c25fe4ec5ae39063fd2e002d4" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-56d599aff1274f2fb103c28bd5959e03"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-56d599aff1274f2fb103c28bd5959e03" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">9e0b789c25fe4ec5ae39063fd2e002d4</h4></div>
+            <div class="modal-header"><h4 class="modal-title">56d599aff1274f2fb103c28bd5959e03</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="ins">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18343,11 +18346,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="ins_norm" class="active"><span class="package">ins_norm</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-3553a3e44a6543b0bb2dd1a3556a6378"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-3553a3e44a6543b0bb2dd1a3556a6378" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-86cefe9334954c76b1126c98ecaf2a2b"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-86cefe9334954c76b1126c98ecaf2a2b" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">3553a3e44a6543b0bb2dd1a3556a6378</h4></div>
+            <div class="modal-header"><h4 class="modal-title">86cefe9334954c76b1126c98ecaf2a2b</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="ins_norm">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -18405,11 +18408,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="glu" class="active"><span class="package">glu</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-d36626e4290841348aed3d96262be80f"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-d36626e4290841348aed3d96262be80f" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-4a218680af694843bfc122167b6286a7"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-4a218680af694843bfc122167b6286a7" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">d36626e4290841348aed3d96262be80f</h4></div>
+            <div class="modal-header"><h4 class="modal-title">4a218680af694843bfc122167b6286a7</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="glu">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -18523,11 +18526,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="glu_norm" class="active"><span class="package">glu_norm</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-aabc0aed93b94be98ffcc656fba4a211"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-aabc0aed93b94be98ffcc656fba4a211" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-99f885eb27db4c2bab361526ecc9105f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-99f885eb27db4c2bab361526ecc9105f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">aabc0aed93b94be98ffcc656fba4a211</h4></div>
+            <div class="modal-header"><h4 class="modal-title">99f885eb27db4c2bab361526ecc9105f</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="glu_norm">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -18585,11 +18588,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="epi" class="active"><span class="package">epi</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-ac19c56f321e47aeb0a4c5238df23f9f"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-ac19c56f321e47aeb0a4c5238df23f9f" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-e85dd082d20d49f585a7e89093bedfc2"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-e85dd082d20d49f585a7e89093bedfc2" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">ac19c56f321e47aeb0a4c5238df23f9f</h4></div>
+            <div class="modal-header"><h4 class="modal-title">e85dd082d20d49f585a7e89093bedfc2</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="epi">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -18703,11 +18706,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="epi_norm" class="active"><span class="package">epi_norm</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-dd12744997ac489a85f9bd402e1e7a08"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-dd12744997ac489a85f9bd402e1e7a08" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-389c7d95e2274ecfb728e86ab659d358"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-389c7d95e2274ecfb728e86ab659d358" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">dd12744997ac489a85f9bd402e1e7a08</h4></div>
+            <div class="modal-header"><h4 class="modal-title">389c7d95e2274ecfb728e86ab659d358</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="epi_norm">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -18765,11 +18768,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="K_ins" class="active"><span class="package">K_ins</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-7fcddd655d6e468e83f9309be5f6fdc7"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-7fcddd655d6e468e83f9309be5f6fdc7" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-5e553149c4c9422e9a35215d9a43361a"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-5e553149c4c9422e9a35215d9a43361a" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">7fcddd655d6e468e83f9309be5f6fdc7</h4></div>
+            <div class="modal-header"><h4 class="modal-title">5e553149c4c9422e9a35215d9a43361a</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="K_ins">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18820,11 +18823,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="K_glu" class="active"><span class="package">K_glu</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-3d51cb6fd2ba49daa81f08dfe6b998fd"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-3d51cb6fd2ba49daa81f08dfe6b998fd" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-53158fbd2a5846059fd22ebe0ea9ae85"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-53158fbd2a5846059fd22ebe0ea9ae85" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">3d51cb6fd2ba49daa81f08dfe6b998fd</h4></div>
+            <div class="modal-header"><h4 class="modal-title">53158fbd2a5846059fd22ebe0ea9ae85</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="K_glu">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18875,11 +18878,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="K_epi" class="active"><span class="package">K_epi</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-2fa669e59383423197ae169c609c2e2b"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-2fa669e59383423197ae169c609c2e2b" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-e270c96461094a199729e9c89144a19e"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-e270c96461094a199729e9c89144a19e" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">2fa669e59383423197ae169c609c2e2b</h4></div>
+            <div class="modal-header"><h4 class="modal-title">e270c96461094a199729e9c89144a19e</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="K_epi">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -18930,11 +18933,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="gamma" class="active"><span class="package">gamma</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-02448533521a46d4b9b41e39733e940d"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-02448533521a46d4b9b41e39733e940d" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-eb71e6b122c14eb789ac467e46c7d4b2"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-eb71e6b122c14eb789ac467e46c7d4b2" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">02448533521a46d4b9b41e39733e940d</h4></div>
+            <div class="modal-header"><h4 class="modal-title">eb71e6b122c14eb789ac467e46c7d4b2</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="gamma">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -19045,16 +19048,16 @@
 	<td></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="nadh_tot" class="active"><span class="package">nadh_tot</span> <code>meta_02353bc7f02344d68fade84b616c2be0</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-fcf025b3110a4b808c5cbb030b9efcbf"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-fcf025b3110a4b808c5cbb030b9efcbf" role="dialog">
+	    <td id="nadh_tot" class="active"><span class="package">nadh_tot</span> <code>meta_6b6b6a539fd844cfb39155c814dce264</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-a2505f47cf8149e4b43ad480e210ff1c"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-a2505f47cf8149e4b43ad480e210ff1c" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">fcf025b3110a4b808c5cbb030b9efcbf</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_02353bc7f02344d68fade84b616c2be0" sboTerm="SBO:0000359" variable="nadh_tot">
+            <div class="modal-header"><h4 class="modal-title">a2505f47cf8149e4b43ad480e210ff1c</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_6b6b6a539fd844cfb39155c814dce264" sboTerm="SBO:0000359" variable="nadh_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_02353bc7f02344d68fade84b616c2be0">
+      <rdf:Description rdf:about="#meta_6b6b6a539fd844cfb39155c814dce264">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19110,16 +19113,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="atp_tot" class="active"><span class="package">atp_tot</span> <code>meta_5e079f4ce72444d99de43fcadbcf3962</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-176da3d6a3984d7aa12d8a3079d6aa76"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-176da3d6a3984d7aa12d8a3079d6aa76" role="dialog">
+	    <td id="atp_tot" class="active"><span class="package">atp_tot</span> <code>meta_fce8a92f166e49908cc07001a6bad36c</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-178010d1c96c425abc12cb55444d8bd5"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-178010d1c96c425abc12cb55444d8bd5" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">176da3d6a3984d7aa12d8a3079d6aa76</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_5e079f4ce72444d99de43fcadbcf3962" sboTerm="SBO:0000359" variable="atp_tot">
+            <div class="modal-header"><h4 class="modal-title">178010d1c96c425abc12cb55444d8bd5</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_fce8a92f166e49908cc07001a6bad36c" sboTerm="SBO:0000359" variable="atp_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_5e079f4ce72444d99de43fcadbcf3962">
+      <rdf:Description rdf:about="#meta_fce8a92f166e49908cc07001a6bad36c">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19177,16 +19180,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="utp_tot" class="active"><span class="package">utp_tot</span> <code>meta_922ad00af43945369da391956e5d3f10</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-0889c3eadd0542bab980ceb7f970c5be"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-0889c3eadd0542bab980ceb7f970c5be" role="dialog">
+	    <td id="utp_tot" class="active"><span class="package">utp_tot</span> <code>meta_6ecf0df5eeb3439487a8dcccce29ec1a</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-84079de68c334f50ab67948f902bbb66"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-84079de68c334f50ab67948f902bbb66" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">0889c3eadd0542bab980ceb7f970c5be</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_922ad00af43945369da391956e5d3f10" sboTerm="SBO:0000359" variable="utp_tot">
+            <div class="modal-header"><h4 class="modal-title">84079de68c334f50ab67948f902bbb66</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_6ecf0df5eeb3439487a8dcccce29ec1a" sboTerm="SBO:0000359" variable="utp_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_922ad00af43945369da391956e5d3f10">
+      <rdf:Description rdf:about="#meta_6ecf0df5eeb3439487a8dcccce29ec1a">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19244,16 +19247,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="gtp_tot" class="active"><span class="package">gtp_tot</span> <code>meta_a8ba6fd224aa4850b4e9a5fed7e4ab71</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c348eb5227bd46b09d66c18ac56b3d7d"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-c348eb5227bd46b09d66c18ac56b3d7d" role="dialog">
+	    <td id="gtp_tot" class="active"><span class="package">gtp_tot</span> <code>meta_f323a1ad195843abb0c687b5efbe38c9</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-598aa028ab7c4203b7f5496be6fb82c6"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-598aa028ab7c4203b7f5496be6fb82c6" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">c348eb5227bd46b09d66c18ac56b3d7d</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_a8ba6fd224aa4850b4e9a5fed7e4ab71" sboTerm="SBO:0000359" variable="gtp_tot">
+            <div class="modal-header"><h4 class="modal-title">598aa028ab7c4203b7f5496be6fb82c6</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_f323a1ad195843abb0c687b5efbe38c9" sboTerm="SBO:0000359" variable="gtp_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_a8ba6fd224aa4850b4e9a5fed7e4ab71">
+      <rdf:Description rdf:about="#meta_f323a1ad195843abb0c687b5efbe38c9">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19309,16 +19312,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="nadh_mito_tot" class="active"><span class="package">nadh_mito_tot</span> <code>meta_a35bde21f0dd4748b8e5e932b58139fe</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-723ac8d787254fb39160b655997fed00"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-723ac8d787254fb39160b655997fed00" role="dialog">
+	    <td id="nadh_mito_tot" class="active"><span class="package">nadh_mito_tot</span> <code>meta_95ad2b8de22d4cb2b1f30c9cfe8d83c7</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-3b86cac49b1340e4b55f3097853b2f70"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-3b86cac49b1340e4b55f3097853b2f70" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">723ac8d787254fb39160b655997fed00</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_a35bde21f0dd4748b8e5e932b58139fe" sboTerm="SBO:0000359" variable="nadh_mito_tot">
+            <div class="modal-header"><h4 class="modal-title">3b86cac49b1340e4b55f3097853b2f70</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_95ad2b8de22d4cb2b1f30c9cfe8d83c7" sboTerm="SBO:0000359" variable="nadh_mito_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_a35bde21f0dd4748b8e5e932b58139fe">
+      <rdf:Description rdf:about="#meta_95ad2b8de22d4cb2b1f30c9cfe8d83c7">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19374,16 +19377,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="atp_mito_tot" class="active"><span class="package">atp_mito_tot</span> <code>meta_5d40c7ec29b244eda4b6156b0bac8420</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-0bc5a2b8ced94b1681ea217f43aa96f1"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-0bc5a2b8ced94b1681ea217f43aa96f1" role="dialog">
+	    <td id="atp_mito_tot" class="active"><span class="package">atp_mito_tot</span> <code>meta_91af991c9810494baa94d5c0574304eb</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-1f7830f39e9347e0b46031a7f857b66f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-1f7830f39e9347e0b46031a7f857b66f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">0bc5a2b8ced94b1681ea217f43aa96f1</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_5d40c7ec29b244eda4b6156b0bac8420" sboTerm="SBO:0000359" variable="atp_mito_tot">
+            <div class="modal-header"><h4 class="modal-title">1f7830f39e9347e0b46031a7f857b66f</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_91af991c9810494baa94d5c0574304eb" sboTerm="SBO:0000359" variable="atp_mito_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_5d40c7ec29b244eda4b6156b0bac8420">
+      <rdf:Description rdf:about="#meta_91af991c9810494baa94d5c0574304eb">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19439,16 +19442,16 @@
 	<td><div class="cvterm"><span class="collection">BQB_IS</span><br /><a href="https://identifiers.org/sbo/SBO:0000359" target="_blank">SBO:0000359</a></div></td>
 </tr>
                 <tr>    <td class="hidden">Rule</td>
-	    <td id="gtp_mito_tot" class="active"><span class="package">gtp_mito_tot</span> <code>meta_a81ff5215d6f47f1be421fbed73cc255</code>
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c1bb86d7b80b4701b1af3aae5d7e6ee5"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-c1bb86d7b80b4701b1af3aae5d7e6ee5" role="dialog">
+	    <td id="gtp_mito_tot" class="active"><span class="package">gtp_mito_tot</span> <code>meta_6acc7ffe7cba40949fcc1ff635ba6386</code>
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-4e324ec89cf14277a9c06a25a97a60a4"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-4e324ec89cf14277a9c06a25a97a60a4" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">c1bb86d7b80b4701b1af3aae5d7e6ee5</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_a81ff5215d6f47f1be421fbed73cc255" sboTerm="SBO:0000359" variable="gtp_mito_tot">
+            <div class="modal-header"><h4 class="modal-title">4e324ec89cf14277a9c06a25a97a60a4</h4></div>
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule metaid="meta_6acc7ffe7cba40949fcc1ff635ba6386" sboTerm="SBO:0000359" variable="gtp_mito_tot">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_a81ff5215d6f47f1be421fbed73cc255">
+      <rdf:Description rdf:about="#meta_6acc7ffe7cba40949fcc1ff635ba6386">
         <bqbiol:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -19505,16 +19508,19 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="HGP" class="active"><span class="package">HGP</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-41bf6204b5954362a8957ea309a88a33"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-41bf6204b5954362a8957ea309a88a33" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-04068c4c54a5418db7a6e52b0b6abb98"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-04068c4c54a5418db7a6e52b0b6abb98" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">41bf6204b5954362a8957ea309a88a33</h4></div>
+            <div class="modal-header"><h4 class="modal-title">04068c4c54a5418db7a6e52b0b6abb98</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="HGP">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
       <times/>
-      <ci> GLUT2 </ci>
+      <apply>
+        <minus/>
+        <ci> GLUT2 </ci>
+      </apply>
       <ci> flux_conversion </ci>
     </apply>
   </math>
@@ -19530,7 +19536,10 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <ci> GLUT2 </ci>
+    <apply>
+      <minus/>
+      <ci> GLUT2 </ci>
+    </apply>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -19565,16 +19574,19 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GNG" class="active"><span class="package">GNG</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-324046a33f044393b55fd3b631ed0c66"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-324046a33f044393b55fd3b631ed0c66" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-eb8f9588a13d4e8a83332b6b18b3d2b7"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-eb8f9588a13d4e8a83332b6b18b3d2b7" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">324046a33f044393b55fd3b631ed0c66</h4></div>
+            <div class="modal-header"><h4 class="modal-title">eb8f9588a13d4e8a83332b6b18b3d2b7</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GNG">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
       <times/>
-      <ci> GPI </ci>
+      <apply>
+        <minus/>
+        <ci> GPI </ci>
+      </apply>
       <ci> flux_conversion </ci>
     </apply>
   </math>
@@ -19590,7 +19602,10 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <ci> GPI </ci>
+    <apply>
+      <minus/>
+      <ci> GPI </ci>
+    </apply>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -19625,19 +19640,16 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GLY" class="active"><span class="package">GLY</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-ce24545c659f4cfcb2e5530268dc9806"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-ce24545c659f4cfcb2e5530268dc9806" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-0c0874d3e06b47598f206c7675843c5e"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-0c0874d3e06b47598f206c7675843c5e" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">ce24545c659f4cfcb2e5530268dc9806</h4></div>
+            <div class="modal-header"><h4 class="modal-title">0c0874d3e06b47598f206c7675843c5e</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GLY">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
       <times/>
-      <apply>
-        <minus/>
-        <ci> G16PI </ci>
-      </apply>
+      <ci> G16PI </ci>
       <ci> flux_conversion </ci>
     </apply>
   </math>
@@ -19653,10 +19665,7 @@
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <apply>
     <times/>
-    <apply>
-      <minus/>
-      <ci> G16PI </ci>
-    </apply>
+    <ci> G16PI </ci>
     <ci> flux_conversion </ci>
   </apply>
 </math></td>
@@ -19691,11 +19700,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GK_gc_free" class="active"><span class="package">GK_gc_free</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-0e12356cd1b546859c70aad0bc0f9d36"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-0e12356cd1b546859c70aad0bc0f9d36" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-57be775f33414df7913c43537a8a170b"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-57be775f33414df7913c43537a8a170b" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">0e12356cd1b546859c70aad0bc0f9d36</h4></div>
+            <div class="modal-header"><h4 class="modal-title">57be775f33414df7913c43537a8a170b</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GK_gc_free">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -19799,11 +19808,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GS_fs" class="active"><span class="package">GS_fs</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-89e21823301a4f19b727e8f1a360de28"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-89e21823301a4f19b727e8f1a360de28" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-48101e306f66452a94552537f1c5de8c"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-48101e306f66452a94552537f1c5de8c" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">89e21823301a4f19b727e8f1a360de28</h4></div>
+            <div class="modal-header"><h4 class="modal-title">48101e306f66452a94552537f1c5de8c</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GS_fs">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -19883,11 +19892,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GSn_k_udpglc" class="active"><span class="package">GSn_k_udpglc</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-35fc7bc15bf2450ebfc07825488bc7ea"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-35fc7bc15bf2450ebfc07825488bc7ea" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-218aa12f12a340f2a2b05bca031a74c5"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-218aa12f12a340f2a2b05bca031a74c5" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">35fc7bc15bf2450ebfc07825488bc7ea</h4></div>
+            <div class="modal-header"><h4 class="modal-title">218aa12f12a340f2a2b05bca031a74c5</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GSn_k_udpglc">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -19943,11 +19952,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GSp_k_udpglc" class="active"><span class="package">GSp_k_udpglc</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f97a9c934c694d2cb1e27db411fb3ba6"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-f97a9c934c694d2cb1e27db411fb3ba6" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-292889ea80604fd69c435f831d83d071"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-292889ea80604fd69c435f831d83d071" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">f97a9c934c694d2cb1e27db411fb3ba6</h4></div>
+            <div class="modal-header"><h4 class="modal-title">292889ea80604fd69c435f831d83d071</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GSp_k_udpglc">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20003,11 +20012,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GSn" class="active"><span class="package">GSn</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f6812560dfc348cab20cf05a2b942a44"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-f6812560dfc348cab20cf05a2b942a44" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c019fe1dae7b4f1eb37607ce72cea5f9"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-c019fe1dae7b4f1eb37607ce72cea5f9" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">f6812560dfc348cab20cf05a2b942a44</h4></div>
+            <div class="modal-header"><h4 class="modal-title">c019fe1dae7b4f1eb37607ce72cea5f9</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GSn">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20074,11 +20083,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GSp" class="active"><span class="package">GSp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-fb02f578a4c343a0a0ed6e6ce20b7b79"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-fb02f578a4c343a0a0ed6e6ce20b7b79" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-d4d754766c7a4c7198eb4dfe6701b9ef"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-d4d754766c7a4c7198eb4dfe6701b9ef" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">fb02f578a4c343a0a0ed6e6ce20b7b79</h4></div>
+            <div class="modal-header"><h4 class="modal-title">d4d754766c7a4c7198eb4dfe6701b9ef</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GSp">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20145,11 +20154,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GP_fmax" class="active"><span class="package">GP_fmax</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-90775db9e9ce418ca119317ec8387fe2"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-90775db9e9ce418ca119317ec8387fe2" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-b74eccb88d7148f29ab5d7ab6d1026f4"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-b74eccb88d7148f29ab5d7ab6d1026f4" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">90775db9e9ce418ca119317ec8387fe2</h4></div>
+            <div class="modal-header"><h4 class="modal-title">b74eccb88d7148f29ab5d7ab6d1026f4</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GP_fmax">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -20213,11 +20222,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GPn_Vmax" class="active"><span class="package">GPn_Vmax</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-bc0dd28c985b4f71b1c1648bf0883466"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-bc0dd28c985b4f71b1c1648bf0883466" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-6fc091579cc94d3a8af3e4d795301420"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-6fc091579cc94d3a8af3e4d795301420" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">bc0dd28c985b4f71b1c1648bf0883466</h4></div>
+            <div class="modal-header"><h4 class="modal-title">6fc091579cc94d3a8af3e4d795301420</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GPn_Vmax">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20308,11 +20317,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GPn" class="active"><span class="package">GPn</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-18181623499b4eefa06edbfab6c1a09b"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-18181623499b4eefa06edbfab6c1a09b" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-bbe5e7f0f48d4809b1ec11995d29e40f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-bbe5e7f0f48d4809b1ec11995d29e40f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">18181623499b4eefa06edbfab6c1a09b</h4></div>
+            <div class="modal-header"><h4 class="modal-title">bbe5e7f0f48d4809b1ec11995d29e40f</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GPn">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -20473,11 +20482,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GPp_Vmax" class="active"><span class="package">GPp_Vmax</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-3a403a91d8cd459aaa4dee733e236bf7"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-3a403a91d8cd459aaa4dee733e236bf7" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-24b37b33d6184b3c8b0a782f600563e0"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-24b37b33d6184b3c8b0a782f600563e0" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">3a403a91d8cd459aaa4dee733e236bf7</h4></div>
+            <div class="modal-header"><h4 class="modal-title">24b37b33d6184b3c8b0a782f600563e0</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GPp_Vmax">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -20568,11 +20577,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="GPp" class="active"><span class="package">GPp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-b6de50518b64423d8a909c02ffb7cc07"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-b6de50518b64423d8a909c02ffb7cc07" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-1cf772f5959c43dabe63050351a491a4"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-1cf772f5959c43dabe63050351a491a4" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">b6de50518b64423d8a909c02ffb7cc07</h4></div>
+            <div class="modal-header"><h4 class="modal-title">1cf772f5959c43dabe63050351a491a4</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="GPp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -20733,11 +20742,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PFK2n" class="active"><span class="package">PFK2n</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-ebe03d0f864c43c8aaa9b7cf8835922a"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-ebe03d0f864c43c8aaa9b7cf8835922a" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f8d68b46b7a5419badeb89128f74f34f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-f8d68b46b7a5419badeb89128f74f34f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">ebe03d0f864c43c8aaa9b7cf8835922a</h4></div>
+            <div class="modal-header"><h4 class="modal-title">f8d68b46b7a5419badeb89128f74f34f</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PFK2n">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20854,11 +20863,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PFK2p" class="active"><span class="package">PFK2p</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-b3503268178b4d5abcbfdf1db937e459"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-b3503268178b4d5abcbfdf1db937e459" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-b7fdc7b5441f4c238b7cf413e4394cd1"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-b7fdc7b5441f4c238b7cf413e4394cd1" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">b3503268178b4d5abcbfdf1db937e459</h4></div>
+            <div class="modal-header"><h4 class="modal-title">b7fdc7b5441f4c238b7cf413e4394cd1</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PFK2p">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -20971,11 +20980,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="FBP2n" class="active"><span class="package">FBP2n</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-414b8b8c07eb44e994fea70fd840e0ae"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-414b8b8c07eb44e994fea70fd840e0ae" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c61d94009a174275a443a175d58db64f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-c61d94009a174275a443a175d58db64f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">414b8b8c07eb44e994fea70fd840e0ae</h4></div>
+            <div class="modal-header"><h4 class="modal-title">c61d94009a174275a443a175d58db64f</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="FBP2n">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21070,11 +21079,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="FBP2p" class="active"><span class="package">FBP2p</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-759fb69e0668408eb880912f2cd0646d"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-759fb69e0668408eb880912f2cd0646d" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-c29c533814224c6392b966f46e597c7c"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-c29c533814224c6392b966f46e597c7c" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">759fb69e0668408eb880912f2cd0646d</h4></div>
+            <div class="modal-header"><h4 class="modal-title">c29c533814224c6392b966f46e597c7c</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="FBP2p">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21169,11 +21178,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKn_f" class="active"><span class="package">PKn_f</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-1f0863a47f624a04b39e431bddda2746"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-1f0863a47f624a04b39e431bddda2746" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f6bed296e9784cb69836a3001b352d8c"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-f6bed296e9784cb69836a3001b352d8c" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">1f0863a47f624a04b39e431bddda2746</h4></div>
+            <div class="modal-header"><h4 class="modal-title">f6bed296e9784cb69836a3001b352d8c</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKn_f">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -21237,11 +21246,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKp_f" class="active"><span class="package">PKp_f</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-43dc12c24fa840f9a60ec2bed7472c5c"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-43dc12c24fa840f9a60ec2bed7472c5c" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-1ce557dc25fa48778d1d96ee6f682f6a"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-1ce557dc25fa48778d1d96ee6f682f6a" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">43dc12c24fa840f9a60ec2bed7472c5c</h4></div>
+            <div class="modal-header"><h4 class="modal-title">1ce557dc25fa48778d1d96ee6f682f6a</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKp_f">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -21305,11 +21314,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKn_alpha_inp" class="active"><span class="package">PKn_alpha_inp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-3f4dfef01db74784b005b46673c79b45"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-3f4dfef01db74784b005b46673c79b45" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-8d2603120435414087c935004cff1030"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-8d2603120435414087c935004cff1030" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">3f4dfef01db74784b005b46673c79b45</h4></div>
+            <div class="modal-header"><h4 class="modal-title">8d2603120435414087c935004cff1030</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKn_alpha_inp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21365,11 +21374,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKp_alpha_inp" class="active"><span class="package">PKp_alpha_inp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-03df59fb77674bc58e40e19c604da2c8"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-03df59fb77674bc58e40e19c604da2c8" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-adfbb510b5ae4254852764c63c0e453d"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-adfbb510b5ae4254852764c63c0e453d" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">03df59fb77674bc58e40e19c604da2c8</h4></div>
+            <div class="modal-header"><h4 class="modal-title">adfbb510b5ae4254852764c63c0e453d</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKp_alpha_inp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21425,11 +21434,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKn_pep_inp" class="active"><span class="package">PKn_pep_inp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-57306cf73a944b0aa4237f850f540f00"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-57306cf73a944b0aa4237f850f540f00" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-ea6bd733899949f6aa53edf5ea149582"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-ea6bd733899949f6aa53edf5ea149582" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">57306cf73a944b0aa4237f850f540f00</h4></div>
+            <div class="modal-header"><h4 class="modal-title">ea6bd733899949f6aa53edf5ea149582</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKn_pep_inp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21496,11 +21505,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKp_pep_inp" class="active"><span class="package">PKp_pep_inp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-266ef82cef364231a266b5dd4717db9c"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-266ef82cef364231a266b5dd4717db9c" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-93529cfd2e594ff2a7145519c1e90172"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-93529cfd2e594ff2a7145519c1e90172" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">266ef82cef364231a266b5dd4717db9c</h4></div>
+            <div class="modal-header"><h4 class="modal-title">93529cfd2e594ff2a7145519c1e90172</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKp_pep_inp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21567,11 +21576,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKn" class="active"><span class="package">PKn</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-97d9b65bc94e4a1198e323f41963520e"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-97d9b65bc94e4a1198e323f41963520e" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-22e14a8e74044bc184d4b9ab989b1b44"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-22e14a8e74044bc184d4b9ab989b1b44" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">97d9b65bc94e4a1198e323f41963520e</h4></div>
+            <div class="modal-header"><h4 class="modal-title">22e14a8e74044bc184d4b9ab989b1b44</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKn">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21718,11 +21727,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PKp" class="active"><span class="package">PKp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-62a0af2a329c4d3f979a937545533404"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-62a0af2a329c4d3f979a937545533404" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-f4b0819e79fa4696bb04b52d6803a30f"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-f4b0819e79fa4696bb04b52d6803a30f" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">62a0af2a329c4d3f979a937545533404</h4></div>
+            <div class="modal-header"><h4 class="modal-title">f4b0819e79fa4696bb04b52d6803a30f</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PKp">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -21869,11 +21878,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PDH_base" class="active"><span class="package">PDH_base</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-72d3871b103d4200821ae89ccfffb0b0"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-72d3871b103d4200821ae89ccfffb0b0" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-e42e08324da64d2980ddf935a0e053e4"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-e42e08324da64d2980ddf935a0e053e4" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">72d3871b103d4200821ae89ccfffb0b0</h4></div>
+            <div class="modal-header"><h4 class="modal-title">e42e08324da64d2980ddf935a0e053e4</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PDH_base">
   <math xmlns="http://www.w3.org/1998/Math/MathML" xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
     <apply>
@@ -22034,11 +22043,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PDHn" class="active"><span class="package">PDHn</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-0ff0d2a2a7b84eacaf43961ba6727161"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-0ff0d2a2a7b84eacaf43961ba6727161" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-30478cd7d1f64cc88fd06e0964d25c0d"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-30478cd7d1f64cc88fd06e0964d25c0d" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">0ff0d2a2a7b84eacaf43961ba6727161</h4></div>
+            <div class="modal-header"><h4 class="modal-title">30478cd7d1f64cc88fd06e0964d25c0d</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PDHn">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -22085,11 +22094,11 @@
 </tr>
                 <tr>    <td class="hidden">Rule</td>
 	    <td id="PDHp" class="active"><span class="package">PDHp</span> 
-      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-69c0732d42e64f2e892942acf327a636"><i class="fa fa-code"></i></button>
-      <div class="modal fade" id="model-69c0732d42e64f2e892942acf327a636" role="dialog">
+      <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#model-faa2013828d849408abb320438c2f99d"><i class="fa fa-code"></i></button>
+      <div class="modal fade" id="model-faa2013828d849408abb320438c2f99d" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <div class="modal-header"><h4 class="modal-title">69c0732d42e64f2e892942acf327a636</h4></div>
+            <div class="modal-header"><h4 class="modal-title">faa2013828d849408abb320438c2f99d</h4></div>
             <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><assignmentRule variable="PDHp">
   <math xmlns="http://www.w3.org/1998/Math/MathML">
     <apply>
@@ -25658,7 +25667,7 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header"><h4 class="modal-title">EN</h4></div>
-            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><reaction metaid="meta_EN" sboTerm="SBO:0000176" id="EN" name="2-Phospho-D-glucerate hydro-lyase (enolase)" reversible="true" fast="false" compartment="cyto">
+            <div class="modal-body"><textarea rows="20" class="form-control" style="min-width: 100%; font-family: 'Courier New'"><reaction metaid="meta_EN" sboTerm="SBO:0000176" id="EN" name="2-Phospho-D-glycerate hydro-lyase (enolase)" reversible="true" fast="false" compartment="cyto">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
       <rdf:Description rdf:about="#meta_EN">
@@ -25736,7 +25745,7 @@
     
     </td>
 
-	<td>2-Phospho-D-glucerate hydro-lyase (enolase)<br />
+	<td>2-Phospho-D-glycerate hydro-lyase (enolase)<br />
 	</td>
 	<td class ="success">&#8646;</td>
 	<td>pg2 &#8646; h2o + pep</td>

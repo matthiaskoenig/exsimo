@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     # exp_classes = [DoseResponseExperiment, PathwayExperiment, GlycogenExperiment]
-    exp_classes = [DoseResponseExperiment]
+    exp_classes = [PathwayExperiment]
     for exp_class in exp_classes:
         run_experiment(exp_class,
                        output_path=RESULT_PATH,

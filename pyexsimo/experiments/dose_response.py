@@ -10,7 +10,6 @@ from sbmlsim.plotting_matplotlib import add_data, add_line, plt
 from sbmlsim.pkpd import pkpd
 
 
-
 class DoseResponseExperiment(SimulationExperiment):
     @property
     def datasets(self) -> Dict[str, DataSet]:
@@ -90,12 +89,10 @@ class DoseResponseExperiment(SimulationExperiment):
         f.subplots_adjust(wspace=.3, hspace=.3)
         axes = (ax1, ax2, ax3, ax4)
 
-        # simulation (process results)
+        # process scan results
         tcscan = self.scans["glc_scan"]
         glc_vec = tcscan.scan['[glc_ext]']
         results = self.scan_results["glc_scan"]  # type: Result
-
-        # result vectors
         dose_response = {k: list() for k in ["glu", "epi", "ins", "gamma"]}
         for k, glc_ext in enumerate(glc_vec):
             s = results.frames[k]
@@ -107,6 +104,8 @@ class DoseResponseExperiment(SimulationExperiment):
         dose_response['[glc_ext]'] = glc_vec
         df = pd.DataFrame(dose_response)
         dset = DataSet.from_df(df, udict=self.udict, ureg=self.ureg)
+
+        # plot scan results
         kwargs = {
             'linewidth': 2,
             'linestyle': '-',
@@ -122,7 +121,7 @@ class DoseResponseExperiment(SimulationExperiment):
         add_data(ax4, dset, xid="[glc_ext]", yid="gamma",
                  xunit=xunit, yunit=yunit_gamma, **kwargs)
 
-        # experimental data
+        # plot experimental data
         kwargs = {
             'color': "black",
             'linestyle': "None",
