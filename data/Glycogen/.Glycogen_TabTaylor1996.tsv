@@ -1,0 +1,6 @@
+study	reference	condition	time	time_unit	gly	gly_sd	gly_unit
+Glycogen	Taylor1996	normal	0	min	206.604	21.132	mM
+Glycogen	Taylor1996	normal	120	min	247.358	17.359	mM
+Glycogen	Taylor1996	normal	150	min	259.434	18.113	mM
+Glycogen	Taylor1996	normal	180	min	279.057	19.622	mM
+Glycogen	Taylor1996	normal	260	min	295.66	21.887	mM

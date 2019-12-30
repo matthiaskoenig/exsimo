@@ -1,0 +1,11 @@
+study	reference	condition	time	time_unit	gly	gly_sd	gly_unit
+Glycogen	Magnusson1992	normal	4.0	hr	282.446	60.566	mM
+Glycogen	Magnusson1992	normal	13.5	hr	163.062	43.094	mM
+Glycogen	Magnusson1992	normal	17.0	hr	113.561	33.194	mM
+Glycogen	Magnusson1992	normal	19.5	hr	124.626	26.206	mM
+Glycogen	Magnusson1992	normal	22.5	hr	96.6722	22.7118	mM
+Glycogen	Magnusson1992	t2dm	4.0	hr	129.285	19.218	mM
+Glycogen	Magnusson1992	t2dm	13.5	hr	94.9251	15.1419	mM
+Glycogen	Magnusson1992	t2dm	17.0	hr	71.0483	15.7238	mM
+Glycogen	Magnusson1992	t2dm	19.5	hr	78.619	17.4709	mM
+Glycogen	Magnusson1992	t2dm	22.5	hr	67.5541	14.5591	mM
