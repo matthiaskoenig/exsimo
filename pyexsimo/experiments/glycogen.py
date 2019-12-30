@@ -4,12 +4,16 @@ import numpy as np
 
 from sbmlsim.experiment import SimulationExperiment
 from sbmlsim.data import DataSet
-from sbmlsim.timecourse import Timecourse, TimecourseSim
+from sbmlsim.timecourse import Timecourse, TimecourseSim, TimecourseScan
 from sbmlsim.plotting_matplotlib import add_data, add_line, plt
-from sbmlsim.pkpd import pkpd
 
 
 class GlycogenExperiment(SimulationExperiment):
+    """ Simulation of glycogenolysis and glycogen synthesis.
+
+    Setting various glucose concentration and running
+    timecourses of glycogen storage and glycogenolysis.
+    """
     @property
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
@@ -24,59 +28,66 @@ class GlycogenExperiment(SimulationExperiment):
         return dsets
 
     @property
-    def simulations(self) -> Dict[str, TimecourseSim]:
+    def scans(self) -> Dict[str, TimecourseScan]:
+        """Scanning glycogen synthesis and glycogenolysis under
+        various external glucose concentrations.
+        """
         Q_ = self.ureg.Quantity
+        gly_scan = TimecourseScan(
+            tcsim=TimecourseSim([
+                Timecourse(start=0, end=65*60, steps=1000, changes={
+                    '[glyglc]': Q_(500, 'mM')
+                })
+            ]),
+            scan={'[glc_ext]': Q_(np.linspace(3.6, 5.0, num=8), 'mM')},
+        )
+        gs_scan = TimecourseScan(
+            tcsim=TimecourseSim([
+                Timecourse(start=0, end=300, steps=600, changes={
+                    '[glyglc]': Q_(200, 'mM')
+                })
+            ]),
+            scan={'[glc_ext]': Q_(np.linspace(5.5, 8.0, num=6), 'mM')},
+        )
+        return {
+            "gly_scan": gly_scan,
+            "gs_scan": gs_scan,
+        }
 
-        # --- glycogenolysis ---
-        glc_ext_GLY = np.linspace(3.6, 5.0, num=8)  # [mM]
-
-        for glc_ext in glc_ext_GLY:
-            # TODO: 1D parameter scan (time courses)
-            tc_sim = TimecourseSim([
-                Timecourse(start=0, end=65*60, steps=600,
-                           changes={
-                               '[glyglc]': Q_(500, "mM"),
-                               '[glc_ext]': Q_(glc_ext, "mM"),
-                           })
-            ])
-
-        # --- glycogen synthesis ---
-        glc_ext_GS = np.linspace(5.5, 8.0, num=6)  # [mM]
-        for glc_ext in glc_ext_GS:
-            tc_sim = TimecourseSim([
-                Timecourse(start=0, end=300, steps=600,
-                           changes={
-                               '[glyglc]': Q_(200, "mM"),
-                               '[glc_ext]': Q_(glc_ext, "mM"),
-                           })
-            ])
-
-
+    @property
+    def simulations(self) -> Dict[str, TimecourseSim]:
         return {}
 
     @property
     def figures(self) -> Dict[str, Figure]:
-
         xunit_ax1 = "hr"
         xunit_ax2 = "min"
         yunit_gly = "mM"
 
-        f, ((ax1, ax2)) = plt.subplots(1, 2, figsize=(10, 5))
+        f, ((ax1, ax2)) = plt.subplots(2, 1, figsize=(5, 10))
         f.subplots_adjust(wspace=.3, hspace=.3)
         axes = (ax1, ax2)
 
         # simulation
-        '''
-        for s in results_GLY:
-            ax1.plot(s.time / 60, s['[glyglc]'], color="black", linewidth=1.0)
-        for s in results_GS:
-            ax2.plot(s.time / 60, s['[glyglc]'], color="black", linewidth=1.0)
-        '''
+        kwargs = {
+            'color': "black",
+            'linestyle': "-",
+            'linewidth': "2",
+        }
+        result = self.scan_results['gly_scan']
+        add_line(ax1, result, xid="time", yid="[glyglc]", xunit=xunit_ax1,
+                 yunit=yunit_gly,
+                 all_lines=True, **kwargs)
+        result = self.scan_results['gs_scan']
+        add_line(ax2, result, xid="time", yid="[glyglc]", xunit=xunit_ax2,
+                 yunit=yunit_gly,
+                 all_lines=True, **kwargs)
 
         # experimental data
         kwargs = {
             'color': "black",
             'linestyle': "--",
+            'alpha': 0.6,
         }
         dset = self.datasets["Magnusson1992"]
         add_data(ax1, dset, xid="time", yid="gly",
@@ -106,11 +117,9 @@ class GlycogenExperiment(SimulationExperiment):
             ax.set_ylabel('glycogen [mM]')
 
         ax1.set_ylim(0, 500)
-        ax1.set_xlim(9, 65)
+        ax1.set_xlim(0, 65)
         ax2.set_ylim(180, 340)
 
         return {
             'fig1': f
         }
-
-

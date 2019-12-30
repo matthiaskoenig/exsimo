@@ -11,7 +11,7 @@
       </rdf:Description>
     </rdf:RDF>
   </annotation>
-  <model metaid="meta_liver_glucose_8" id="liver_glucose_8" name="liver_glucose_8" substanceUnits="mmole" timeUnits="min" volumeUnits="litre" areaUnits="m2" lengthUnits="m" extentUnits="mmole" fbc:strict="false">
+  <model metaid="meta_liver_glucose_8" id="liver_glucose_8_const_glyglc" name="liver_glucose_8" substanceUnits="mmole" timeUnits="min" volumeUnits="litre" areaUnits="m2" lengthUnits="m" extentUnits="mmole" fbc:strict="false">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <h1>Koenig Human Glucose Metabolism</h1>
@@ -631,7 +631,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="meta_glyglc" sboTerm="SBO:0000247" id="glyglc" name="glycogen" compartment="cyto" initialConcentration="250" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
+      <species metaid="meta_glyglc" sboTerm="SBO:0000247" id="glyglc" name="glycogen" compartment="cyto" initialConcentration="250" substanceUnits="mmole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#meta_glyglc">

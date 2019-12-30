@@ -11,6 +11,7 @@ from sbmlsim.pkpd import pkpd
 
 
 class DoseResponseExperiment(SimulationExperiment):
+    """Hormone dose-response curves."""
     @property
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
@@ -63,6 +64,8 @@ class DoseResponseExperiment(SimulationExperiment):
 
     @property
     def scans(self) -> Dict[str, TimecourseScan]:
+        """Scanning dose-response curves of hormones and gamma function
+        under various external glucose concentrations."""
         Q_ = self.ureg.Quantity
         glc_scan = TimecourseScan(
             tcsim=TimecourseSim([
@@ -80,7 +83,6 @@ class DoseResponseExperiment(SimulationExperiment):
 
     @property
     def figures(self) -> Dict[str, Figure]:
-
         xunit = "mM"
         yunit_hormone = "pmol/l"
         yunit_gamma = "dimensionless"
@@ -154,5 +156,3 @@ class DoseResponseExperiment(SimulationExperiment):
         return {
             'fig1': f
         }
-
-
