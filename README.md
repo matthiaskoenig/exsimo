@@ -1,4 +1,12 @@
+
+
 <h1><img alt="EXSIMO logo" src="./docs/images/exsimo_logo_200.png" height="150" /> EXSIMO: EXecutable SImulation MOdel</h1>
+
+[![Build Status](https://travis-ci.org/matthiaskoenig/exsimo.svg?branch=develop)](https://travis-ci.org/matthiaskoenig/exsimo)
+[![GitHub version](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo.svg)](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo)
+[![DOI](https://zenodo.org/badge/230637955.svg)](https://zenodo.org/badge/latestdoi/230637955)
+
+<b><a href="https://orcid.org/0000-0003-1725-179X" title="https://orcid.org/0000-0003-1725-179X"><img src="./docs/images/orcid.png" height="15"/></a> Matthias König</b>
 
 Data, model and code for executable simulation model of hepatic glucose metabolism.
 
