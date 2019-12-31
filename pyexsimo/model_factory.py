@@ -24,7 +24,7 @@ def create_liver_glucose(target_dir):
     )
 
 
-def create_liver_glucose_const_glycogen(sbml_path, target_dir=MODEL_PATH):
+def create_liver_glucose_const_glycogen(sbml_path, target_dir):
     """Modifies the glucose model with constant glycogen.
 
     For some of the simulations the glycogen concentration ([glyglc])
@@ -46,7 +46,7 @@ def create_liver_glucose_const_glycogen(sbml_path, target_dir=MODEL_PATH):
     sbml_path_new = os.path.join(target_dir, f"{filename[:-4]}{suffix}.xml")
     libsbml.writeSBMLToFile(doc, sbml_path_new)
 
-    sbmlreport.create_report(sbml_path_new, report_dir=str(MODEL_PATH))
+    sbmlreport.create_report(sbml_path_new, report_dir=target_dir)
 
     return sbml_path_new
 

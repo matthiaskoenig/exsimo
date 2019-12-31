@@ -22,6 +22,7 @@ def test_create_models(tmp_path):
     model = doc.getModel()  # type: libsbml.Model
     assert model
 
+
     sbml_path2 = create_liver_glucose_const_glycogen(
         sbml_path=sbml_path, target_dir=tmp_path
     )
