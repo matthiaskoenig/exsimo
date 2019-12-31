@@ -3,21 +3,14 @@ Check annotations of the model objects.
 """
 import pytest
 import libsbml
-from pyexsimo import MODEL_PATH
 
-DOC = libsbml.readSBMLFromFile(str(MODEL_PATH / "liver_glucose.xml"))  # type: libsbml.SBMLDocument
-MODEL = DOC.getModel()  # type: libsbml.Model
+from pyexsimo.tests.utils import DOC, MODEL, species_ids, reaction_ids
 
-
-def species_ids():
-    return [specie.getId() for specie in MODEL.getListOfSpecies()]
-
-def reaction_ids():
-    return [reaction.getId() for reaction in MODEL.getListOfReactions()]
 
 def test_document_has_sbo():
     assert DOC.isSetSBOTerm()
     assert DOC.getSBOTerm() == 293
+
 
 @pytest.mark.parametrize("sid", species_ids())
 def test_specie_has_sbo(sid):
@@ -64,14 +57,17 @@ def _check_annotation(sbase: libsbml.SBase, resource: str):
 def test_specie_has_chebi(sid):
     _check_annotation(MODEL.getSpecies(sid), "chebi")
 
+
 @pytest.mark.parametrize("sid", species_ids())
 def test_specie_has_inchikey(sid):
     if sid not in ["glyglc"]:
         _check_annotation(MODEL.getSpecies(sid), "inchikey")
 
+
 @pytest.mark.parametrize("sid", species_ids())
 def test_specie_has_kegg_compound(sid):
     _check_annotation(MODEL.getSpecies(sid), "kegg.compound")
+
 
 @pytest.mark.parametrize("sid", reaction_ids())
 def test_reaction_has_uniprot(sid):
@@ -79,11 +75,13 @@ def test_reaction_has_uniprot(sid):
         # many isoforms, transporters, pseudoreactions not annotated
         _check_annotation(MODEL.getReaction(sid), "uniprot")
 
+
 @pytest.mark.parametrize("sid", reaction_ids())
 def test_reaction_has_go(sid):
     if sid not in ["OAAFLX", "ACOAFLX", "CITFLX"]:
         # pseudoreactions not annotated
         _check_annotation(MODEL.getReaction(sid), "go")
+
 
 @pytest.mark.parametrize("sid", reaction_ids())
 def test_reaction_has_ec(sid):
@@ -91,11 +89,13 @@ def test_reaction_has_ec(sid):
         # transporters, pseudoreactions not annotated
         _check_annotation(MODEL.getReaction(sid), "ec-code")
 
+
 @pytest.mark.parametrize("sid", reaction_ids())
 def test_reaction_has_rhea(sid):
     if sid not in ["GLUT2", "LACT", "PYRTM", "PEPTM", "OAAFLX", "ACOAFLX", "CITFLX"]:
         # transporters, pseudoreactions not annotated
         _check_annotation(MODEL.getReaction(sid), "rhea")
+
 
 @pytest.mark.parametrize("sid", reaction_ids())
 def test_reaction_has_pr(sid):
