@@ -16,8 +16,9 @@ from setuptools import setup
 
 # parse requirements.txt (packages and github links)
 links = []
-with open("requirements.txt") as reqs_file:
-    requires = reqs_file.readlines()
+# with open("requirements.txt") as reqs_file:
+#    requires = reqs_file.readlines()
+requires = []
 
 
 # read the version and info file
