@@ -6,23 +6,20 @@ import os
 from sbmlutils.modelcreator import creator
 from sbmlutils.report import sbmlreport
 import libsbml
-from pyexsimo import MODEL_PATH
+from pyexsimo import MODEL_PATH, BASE_PATH
 
 
 def create_liver_glucose(target_dir):
     """Create the SBML model"""
 
     # external annotation file
-    annotations_path = os.path.join(
-        os.path.dirname(__file__),
-        'liver_glucose_annotations.xlsx'
-    )
+    annotations_path = BASE_PATH / "models" / 'liver_glucose_annotations.xlsx'
 
     return creator.create_model(
         modules=['pyexsimo.models.liver_glucose'],
         filename="liver_glucose.xml",
         target_dir=target_dir,
-        annotations=annotations_path,
+        annotations=str(annotations_path),
         create_report=True
     )
 
@@ -45,12 +42,13 @@ def create_liver_glucose_const_glycogen(sbml_path, target_dir=MODEL_PATH):
     s_glyglc.setBoundaryCondition(True)
     model.setId(model.getId() + suffix)
 
-    # FIXME: get folder
     _, filename = os.path.split(str(sbml_path))
     sbml_path_new = os.path.join(target_dir, f"{filename[:-4]}{suffix}.xml")
     libsbml.writeSBMLToFile(doc, sbml_path_new)
 
     sbmlreport.create_report(sbml_path_new, report_dir=str(MODEL_PATH))
+
+    return sbml_path_new
 
 
 if __name__ == "__main__":

@@ -1158,6 +1158,7 @@ OAAFLX = Reaction(
     equation='=> oaa_mito []',
     # ->
     compartment='mito',
+    sboTerm=SBO_EXCHANGE_REACTION,
     pars=[
         Parameter('OAAFLX_Vmax', 0, 'mmole_per_min'),
     ],
@@ -1168,6 +1169,7 @@ ACOAFLX = Reaction(
     sid='ACOAFLX',
     name='acetyl-coa efflux',
     equation='acoa_mito => []',
+    sboTerm=SBO_EXCHANGE_REACTION,
     compartment='mito',
     pars=[
         Parameter('ACOAFLX_Vmax', 0, 'mmole_per_min'),
@@ -1179,6 +1181,7 @@ CITFLX = Reaction(
     sid='CITFLX',
     name='citrate efflux',
     equation='cit_mito => []',
+    sboTerm=SBO_EXCHANGE_REACTION,
     compartment='mito',
     pars=[
         Parameter('CITFLX_Vmax', 0, 'mmole_per_min'),
