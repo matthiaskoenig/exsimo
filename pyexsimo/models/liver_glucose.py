@@ -12,7 +12,7 @@ from sbmlutils.units import *
 from sbmlutils.annotation.sbo import *
 from sbmlutils.factory import *
 
-from pyexsimo.model import templates
+from pyexsimo.models import templates
 
 # -----------------------------------------------------------------------------
 # Liver Metabolism
