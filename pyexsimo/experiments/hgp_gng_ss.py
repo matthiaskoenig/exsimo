@@ -42,10 +42,9 @@ class PathwaySSExperiment(SimulationExperiment):
         import matplotlib.cm as cm
         matplotlib.rcParams['contour.negative_linestyle'] = 'solid'
 
-        f, ((ax1, ax2, ax3), (ax4, ax5, ax6)) = plt.subplots(2, 3,
-                                                             figsize=(15, 10))
+        f, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(15, 5))
         f.subplots_adjust(hspace=0.3, wspace=0.3)
-        axes = (ax1, ax2, ax3, ax4, ax5, ax6)
+        axes = (ax1, ax2, ax3)
         for ax in (ax1, ax2, ax3):
             ax.set_xlabel('glucose [mM]')
             ax.set_ylabel('glycogen [mM]')
@@ -62,7 +61,6 @@ class PathwaySSExperiment(SimulationExperiment):
         GNG = np.zeros(shape=(n0, n1))
         GLY = np.zeros(shape=(n0, n1))
 
-
         for k, df in enumerate(result.frames):
             index_list = result.indices[k]
             HGP[index_list] = df.HGP.values[-1]
@@ -76,31 +74,23 @@ class PathwaySSExperiment(SimulationExperiment):
             GNG = GNG.transpose()
             GLY = GLY.transpose()
 
-
         # HGP
         ax1.set_title("HGU/HGP")
-        CS = ax1.contour(glc_ext, glyglc, (HGP.transpose()),
-                         np.linspace(-28, 28, num=15),
-                         colors='k')
-        ax1.clabel(CS, inline=1, fontsize=10)
-        im = ax4.imshow(HGP.transpose(), interpolation='bilinear',
-                        cmap=cm.seismic, origin="lower", vmin=-28, vmax=28)
-
         ax2.set_title("glycolysis/gluconeogenesis")
-        CS = ax2.contour(glc_ext, glyglc, (GNG.transpose()),
-                         np.linspace(-28, 28, num=15),
-                         colors='k')
-        ax2.clabel(CS, inline=1, fontsize=10)
-        ax5.imshow(GNG.transpose(), interpolation='bilinear', cmap=cm.seismic,
-                   origin="lower", vmin=-28, vmax=28)
+        ax3.set_title("glycogen synthesis/glycogenolysis")
 
-        ax2.set_title("glycogen synthesis/glycogenolysis")
-        CS = ax3.contour(glc_ext, glyglc, (GLY.transpose()),
-                         np.linspace(-28, 28, num=15),
-                         colors='k')
-        ax3.clabel(CS, inline=1, fontsize=10)
-        ax6.imshow(GLY.transpose(), interpolation='bilinear', cmap=cm.seismic,
-                   origin="lower", vmin=-28, vmax=28)
+        for ax, data in {ax1: HGP, ax2: GNG, ax3: GLY}.items():
+
+            im = ax.imshow(data.transpose(), interpolation='bilinear',
+                            cmap=cm.seismic, origin="lower",
+                            extent=[2, 14, 0, 500],
+                            # extent=[np.min(glc_ext), np.max(glc_ext), np.min(glyglc), np.max(glyglc)],
+                            aspect="auto")
+
+            CS = ax.contour(glc_ext, glyglc, (data.transpose()),
+                             np.linspace(-28, 28, num=15),
+                             colors='k')
+            ax.clabel(CS, inline=1, fontsize=10)
 
         return {
             'fig1': f

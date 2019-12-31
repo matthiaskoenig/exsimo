@@ -1,3 +1,7 @@
+"""
+Running all simulation experiments.
+"""
+
 import logging
 from sbmlsim.experiment import run_experiment
 
@@ -10,12 +14,12 @@ from pyexsimo.experiments.hgp_gng_ss import PathwaySSExperiment
 logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
-    if False:
-        for exp_class in [DoseResponseExperiment, PathwayExperiment, GlycogenExperiment]:
-            run_experiment(exp_class,
-                           output_path=RESULT_PATH,
-                           model_path=MODEL_PATH / "liver_glucose.xml",
-                           data_path=DATA_PATH)
+
+    for exp_class in [DoseResponseExperiment, PathwayExperiment, GlycogenExperiment]:
+        run_experiment(exp_class,
+                       output_path=RESULT_PATH,
+                       model_path=MODEL_PATH / "liver_glucose.xml",
+                       data_path=DATA_PATH)
 
     run_experiment(PathwaySSExperiment,
                    output_path=RESULT_PATH,
