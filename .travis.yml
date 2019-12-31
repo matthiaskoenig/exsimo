@@ -1,8 +1,8 @@
+sudo: required
 language: python
 cache: pip
 python:
   - "3.6"
-sudo: required
 
 install:
   pip install -r requirements.txt
