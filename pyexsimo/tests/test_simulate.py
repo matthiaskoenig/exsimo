@@ -5,8 +5,9 @@ import pytest
 from pytest import approx
 import roadrunner
 import pandas as pd
+import libsbml
 
-from pyexsimo.tests.utils import get_sbml_files, MODEL
+from pyexsimo.tests.utils import get_sbml_files, DOC
 
 
 @pytest.mark.parametrize("sbml_path", get_sbml_files())
@@ -35,7 +36,7 @@ def test_species_nonnegative(sbml_path):
 @pytest.mark.parametrize("sid_tot", ['nadh_tot', 'atp_tot', 'utp_tot', 'gtp_tot', 'nadh_mito_tot', 'atp_mito_tot', 'gtp_mito_tot'])
 def test_cofactor_bilances(sid_tot):
     """ Test that main cofactors are bilanced during timecourse simulation."""
-    r = roadrunner.RoadRunner(str(MODEL))  # type: roadrunner.RoadRunner
+    r = roadrunner.RoadRunner(libsbml.writeSBMLToString(DOC))  # type: roadrunner.RoadRunner
     r.timeCourseSelections = ["time", sid_tot]
     s = r.simulate(0, 100, steps=100)
     df = pd.DataFrame(s, columns=s.colnames)
