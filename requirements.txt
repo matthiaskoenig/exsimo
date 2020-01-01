@@ -5,5 +5,5 @@ matplotlib>=3.0.3
 pandoc>=1.0.2
 pytest
 -e git://github.com/matthiaskoenig/sbmlutils.git@8f0ac#egg=sbmlutils
--e git://github.com/matthiaskoenig/sbmlsim.git@ceb2f50#egg=sbmlsim
+-e git://github.com/matthiaskoenig/sbmlsim.git@fdac40a#egg=sbmlsim
 
