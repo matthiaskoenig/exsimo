@@ -1,30 +1,27 @@
 # Release guideline
 This document describes steps for releasing a new version
 
-## bump version
-Update version info in `_version.py` and set environment variable
-```bash
-EXSIMO_VERSION=0.3.0a2
-```
-## run tests 
+## checkout develop branch
 ```
 git checkout develop
-(exsimo) pytests
+```
+## bump version
+Update version info in `_version.py`
+## run tests 
+```
+(exsimo) pytest
 ```
 ## execute analysis & update results
 ```
 execute 
 ```
-
 ## push results and code
 ```
 git add -u
 git push
 ```
-
 ## make a pull request against master
-Merge branch in master (after checks passed).
-This triggers a zenodo update and the build of the docker image.
+Merge pull request in master. This triggers a zenodo update and the build of a new docker image with tag latest.
 
 ## make a new release
 - github release from master branch (creates updated zenodo)
@@ -32,7 +29,6 @@ This triggers a zenodo update and the build of the docker image.
 
 ## check online report
 [https://matthiaskoenig.github.io/exsimo/](https://matthiaskoenig.github.io/exsimo/)
-
 
 ## update develop branch
 ```
