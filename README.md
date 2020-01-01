@@ -1,10 +1,8 @@
-
-
 <h1><img alt="EXSIMO logo" src="./docs/images/exsimo_logo_200.png" height="100" /> EXSIMO: EXecutable SImulation MOdel</h1>
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3596068.svg)](https://doi.org/10.5281/zenodo.3596068)
 [![Build Status](https://travis-ci.org/matthiaskoenig/exsimo.svg?branch=develop)](https://travis-ci.org/matthiaskoenig/exsimo)
 [![GitHub version](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo.svg)](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo)
-[![DOI](https://zenodo.org/badge/230637955.svg)](https://zenodo.org/badge/latestdoi/230637955)
 [![codecov](https://codecov.io/gh/matthiaskoenig/exsimo/branch/develop/graph/badge.svg)](https://codecov.io/gh/matthiaskoenig/exsimo)
 
 <b><a href="https://orcid.org/0000-0003-1725-179X" title="https://orcid.org/0000-0003-1725-179X"><img src="./docs/images/orcid.png" height="15"/></a> Matthias König</b>
@@ -17,6 +15,7 @@ Data, model and code for executable simulation model of hepatic glucose metaboli
 * `pyexsimo` - python package (model generation, simulation experiments, tests, ...)
 
 Results of the executed model are available from https://matthiaskoenig.github.io/exsimo/ 
+Docker images at https://hub.docker.com/repository/docker/matthiaskoenig/exsimo
 
 
 ## Run locally
@@ -47,8 +46,20 @@ The complete analysis can be run via
 ```
 which updates the results in the `./docs/` folder.
 
-## Run in docer container
-coming soon 
+## Run in docker container
+For the releases on the master branch docker containers are provided.
+These allow to run the tests or execute the workflow via
+
+TODO: link volume
+- run tests in docker container
+```bash
+docker run -it matthiaskoenig/exsimo:0.3.0a2
+
+docker container exec <container name/ID> pytest
+```
+- execute analysis in docker container
+```bash
+docker container exec <container name/ID> execute
 
 ----
 &copy; 2019 Matthias König.
