@@ -1,38 +1,36 @@
 from typing import Dict
 from matplotlib.pyplot import Figure
 import numpy as np
-import pandas as pd
 
 from sbmlsim.experiment import SimulationExperiment
 from sbmlsim.data import DataSet
 from sbmlsim.timecourse import Timecourse, TimecourseSim, TimecourseScan
 from sbmlsim.plotting_matplotlib import add_data, add_line, plt
-from sbmlsim.pkpd import pkpd
 
 
 class PathwayExperiment(SimulationExperiment):
+    """Timecourse simulations of HGP, GNG, GLY and HGP/GNG.
+
+    Time varying contribution of pathways to hepatic gluconeogenesis.
+    """
     @property
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
         dset_id = "Nuttal2008_TabA"
         df = self.load_data(dset_id)
-        df = df[df.condition == "normal"]  # only healthy controls, no T2DM
+        df = df[df.condition == "normal"]  # only healthy controls
         udict = {key: df[f"{key}_unit"].unique()[0] for key in
-                    ["time", "hgp", "gng", "gly", "gng_hgp"]}
+                 ["time", "hgp", "gng", "gly", "gng_hgp"]}
 
         dsets[dset_id] = DataSet.from_df(df, udict=udict, ureg=self.ureg)
         return dsets
-
-    @property
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        return {}
 
     @property
     def scans(self) -> Dict[str, TimecourseScan]:
         Q_ = self.ureg.Quantity
         glc_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=70*60, steps=2000, changes={
+                Timecourse(start=0, end=70 * 60, steps=2000, changes={
                     '[glyglc]': Q_(350, 'mM')
                 })
             ], time_offset=600),
@@ -44,7 +42,6 @@ class PathwayExperiment(SimulationExperiment):
 
     @property
     def figures(self) -> Dict[str, Figure]:
-
         xunit = "hr"
         yunit_flux = "µmol/kg/min"
         yunit_ratio = "percent"
@@ -59,18 +56,21 @@ class PathwayExperiment(SimulationExperiment):
             'linestyle': "-",
             'linewidth': "2",
         }
-        add_line(ax1, result, xid="time", yid="HGP", xunit=xunit, yunit=yunit_flux,
+        add_line(ax1, result, xid="time", yid="HGP", xunit=xunit,
+                 yunit=yunit_flux,
                  all_lines=True, **kwargs)
-        add_line(ax2, result, xid="time", yid="GNG", xunit=xunit, yunit=yunit_flux,
+        add_line(ax2, result, xid="time", yid="GNG", xunit=xunit,
+                 yunit=yunit_flux,
                  all_lines=True, **kwargs)
-        add_line(ax3, result, xid="time", yid="GLY", xunit=xunit, yunit=yunit_flux,
+        add_line(ax3, result, xid="time", yid="GLY", xunit=xunit,
+                 yunit=yunit_flux,
                  all_lines=True, **kwargs)
 
         # manual plot of s.GNG/s.HGP * 100
         for df in result.frames:
             xk = df['time'].values * result.ureg(result.udict['time'])
             xk = xk.to(xunit)
-            yk = df['GNG'].values/df['HGP'].values * 100
+            yk = df['GNG'].values / df['HGP'].values * 100
             ax4.plot(xk, yk, '-', **kwargs)
 
         # experimental data

@@ -1,5 +1,2 @@
-# Executable simulation model
-[https://github.com/matthiaskoenig/exsimo](https://github.com/matthiaskoenig/exsimo)
-
-## Simulation Experiments
+# Simulation Experiments
 * [GlycogenExperiment](GlycogenExperiment.html)
