@@ -12,6 +12,7 @@ from sbmlsim.pkpd import pkpd
 
 class DoseResponseExperiment(SimulationExperiment):
     """Hormone dose-response curves."""
+
     @property
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
@@ -27,7 +28,8 @@ class DoseResponseExperiment(SimulationExperiment):
             ]
             glu_normal_studies = [
                 "Butler1991", "Cobelli2010", "Fery1993"
-                "Gerich1993", "Henkel2005", "Mitrakou1991"
+                                             "Gerich1993", "Henkel2005",
+                "Mitrakou1991"
                 "Basu2009", "Mitrakou1992",
                 "Degn2004", "Lerche2009",
                 "Levy1998", "Israelian2006",
@@ -43,13 +45,19 @@ class DoseResponseExperiment(SimulationExperiment):
                 df = df[df.reference.isin(epi_normal_studies)]
             elif hormone_key == "Glucagon":
                 df = df[df.reference.isin(glu_normal_studies)]
-                # correct glucagon data for insulin suppression (hyperinsulinemic clamps)
+                # correct glucagon data for insulin suppression
+                # (hyperinsulinemic clamps)
                 insulin_supression = 3.4
                 glu_clamp_studies = [
-                    "Degn2004", "Lerche2009", "Levy1998", "Israelian2006","Segel2002"
+                    "Degn2004", "Lerche2009", "Levy1998", "Israelian2006",
+                    "Segel2002"
                 ]
-                df.loc[df.reference.isin(glu_clamp_studies), 'mean'] = insulin_supression * df[df.reference.isin(glu_clamp_studies)]['mean']
-                df.loc[df.reference.isin(glu_clamp_studies), 'se'] = insulin_supression * df[df.reference.isin(glu_clamp_studies)]['se']
+                df.loc[df.reference.isin(
+                    glu_clamp_studies), 'mean'] = insulin_supression * df[
+                    df.reference.isin(glu_clamp_studies)]['mean']
+                df.loc[df.reference.isin(
+                    glu_clamp_studies), 'se'] = insulin_supression * df[
+                    df.reference.isin(glu_clamp_studies)]['se']
 
             elif hormone_key == "Insulin":
                 df = df[df.reference.isin(ins_normal_studies)]
@@ -58,14 +66,17 @@ class DoseResponseExperiment(SimulationExperiment):
                 'glc': df["glc_unit"].unique()[0],
                 'mean': df["unit"].unique()[0],
             }
-            dsets[hormone_key.lower()] = DataSet.from_df(df, udict=udict, ureg=self.ureg)
+            dsets[hormone_key.lower()] = DataSet.from_df(df, udict=udict,
+                                                         ureg=self.ureg)
 
         return dsets
 
     @property
     def scans(self) -> Dict[str, TimecourseScan]:
-        """Scanning dose-response curves of hormones and gamma function
-        under various external glucose concentrations."""
+        """Scanning dose-response curves of hormones and gamma function.
+
+        Vary external glucose concentrations (boundary condition).
+        """
         Q_ = self.ureg.Quantity
         glc_scan = TimecourseScan(
             tcsim=TimecourseSim([
@@ -76,10 +87,6 @@ class DoseResponseExperiment(SimulationExperiment):
         return {
             "glc_scan": glc_scan
         }
-
-    @property
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        return {}
 
     @property
     def figures(self) -> Dict[str, Figure]:
@@ -129,11 +136,13 @@ class DoseResponseExperiment(SimulationExperiment):
             'linestyle': "None",
             'alpha': 0.6,
         }
-        add_data(ax1, self.datasets["glucagon"], xid="glc", yid="mean", yid_se="se",
+        add_data(ax1, self.datasets["glucagon"], xid="glc", yid="mean",
+                 yid_se="se",
                  xunit=xunit, yunit=yunit_hormone, label="Glucagon", **kwargs)
         add_data(ax2, self.datasets["epinephrine"], xid="glc", yid="mean",
                  yid_se="se",
-                 xunit=xunit, yunit=yunit_hormone, label="Epinephrine", **kwargs)
+                 xunit=xunit, yunit=yunit_hormone, label="Epinephrine",
+                 **kwargs)
         add_data(ax3, self.datasets["insulin"], xid="glc", yid="mean",
                  yid_se="se",
                  xunit=xunit, yunit=yunit_hormone, label="Insulin", **kwargs)

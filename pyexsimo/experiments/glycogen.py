@@ -9,7 +9,7 @@ from sbmlsim.plotting_matplotlib import add_data, add_line, plt
 
 
 class GlycogenExperiment(SimulationExperiment):
-    """ Simulation of glycogenolysis and glycogen synthesis.
+    """Simulation of glycogenolysis and glycogen synthesis.
 
     Setting various glucose concentration and running
     timecourses of glycogen storage and glycogenolysis.
@@ -17,7 +17,8 @@ class GlycogenExperiment(SimulationExperiment):
     @property
     def datasets(self) -> Dict[str, DataSet]:
         dsets = {}
-        for study_id in ['Magnusson1992', 'Rothman1991', 'Radziuk2001', 'Taylor1996']:
+        for study_id in ['Magnusson1992', 'Rothman1991', 'Radziuk2001',
+                         'Taylor1996']:
             dset_id = f"Glycogen_Tab{study_id}"
             df = self.load_data(dset_id)
             df = df[df.condition == "normal"]  # only healthy controls
@@ -29,13 +30,17 @@ class GlycogenExperiment(SimulationExperiment):
 
     @property
     def scans(self) -> Dict[str, TimecourseScan]:
-        """Scanning glycogen synthesis and glycogenolysis under
-        various external glucose concentrations.
+        """Scanning glycogen synthesis and glycogenolysis.
+
+        Simulate glycogenolysis under various external glucose concentrations
+        supporting glycogen degration.
+        Simulate glycogen synthesis under various external glucose
+        concentrations supporting glycogen storage.
         """
         Q_ = self.ureg.Quantity
         gly_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=65*60, steps=1000, changes={
+                Timecourse(start=0, end=65 * 60, steps=1000, changes={
                     '[glyglc]': Q_(500, 'mM')
                 })
             ]),
@@ -55,11 +60,8 @@ class GlycogenExperiment(SimulationExperiment):
         }
 
     @property
-    def simulations(self) -> Dict[str, TimecourseSim]:
-        return {}
-
-    @property
     def figures(self) -> Dict[str, Figure]:
+        """Glycogenolysis and glycogen synthesis figure."""
         xunit_ax1 = "hr"
         xunit_ax2 = "min"
         yunit_gly = "mM"
@@ -68,7 +70,7 @@ class GlycogenExperiment(SimulationExperiment):
         f.subplots_adjust(wspace=.3, hspace=.3)
         axes = (ax1, ax2)
 
-        # simulation
+        # simulations
         kwargs = {
             'color': "black",
             'linestyle': "-",
@@ -96,8 +98,10 @@ class GlycogenExperiment(SimulationExperiment):
 
         dset = self.datasets["Rothman1991"]
         for subject_id in dset.subject.unique():
-            add_data(ax1, dset[dset.subject==subject_id], xid="time", yid="gly",
-                 xunit=xunit_ax1, yunit=yunit_gly, label=f"Glycogen {subject_id}", **kwargs)
+            add_data(ax1, dset[dset.subject == subject_id], xid="time",
+                     yid="gly",
+                     xunit=xunit_ax1, yunit=yunit_gly,
+                     label=f"Glycogen {subject_id}", **kwargs)
 
         dset = self.datasets["Radziuk2001"]
         for ref_id in dset.reference.unique():
