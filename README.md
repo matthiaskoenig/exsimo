@@ -17,6 +17,9 @@ Data, model and code for executable simulation model of hepatic glucose metaboli
 * `pyexsimo` - python package (model generation, simulation experiments, tests, ...)
 * `results` - results of simulation experiments 
 
+## Docker
+The analysis can be run in docker via
+
 
 ## Installation
 
@@ -26,27 +29,16 @@ Create virtual environment with `python3.6`, e.g., with `virtualenv` & `virtuale
 mkvirtualenv exsimo --python=python3.6
 ```
 
-### dependencies
-Install latest `sbmlutils` and `sbmlsim`
-```bash
-git clone https://github.com/matthiaskoenig/sbmlutils.git
-cd sbmlutils
-(exsimo) pip install -e . --upgrade
-
-# install latest sbmlsim
-git clone https://github.com/matthiaskoenig/sbmlsim.git
-cd sbmlsim
-(exsimo) pip install -e . --upgrade
-
-# install latest pyexsimo
+### install latest version
+```
 git clone https://github.com/matthiaskoenig/exsimo.git
 cd exsimo
+(exsimo) pip install -r requirements.txt
 (exsimo) pip install -e . --upgrade
 ```
-## Testing
+## Tests
 Tests can be run via
 ```
-cd exsimo
 (exsimo) pytest
 ```
 ## Run analysis
@@ -56,7 +48,6 @@ The complete analysis, i.e.,
 - creating all figures
 can be run via
 ```
-cd exsimo
 (exsimo) execute
 ```
 
