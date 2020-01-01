@@ -2,8 +2,8 @@ pip>=19.2.3
 numpy>=1.16.3
 pandas>=0.24.2
 matplotlib>=3.0.3
-pandoc>=1.0.2
+jinja2
 pytest
 -e git://github.com/matthiaskoenig/sbmlutils.git@8f0ac#egg=sbmlutils
--e git://github.com/matthiaskoenig/sbmlsim.git@fdac40a#egg=sbmlsim
+-e git://github.com/matthiaskoenig/sbmlsim.git@b5c91fd#egg=sbmlsim
 
