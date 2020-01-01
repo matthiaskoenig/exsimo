@@ -3,7 +3,8 @@
 # DoseResponseExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose.xml](models/liver_glucose.xml)
+* **SBML**: [models/liver_glucose.xml](models/liver_glucose.xml)
+* **HTML**: [models/liver_glucose.html](models/liver_glucose.html)
 
 ## Datasets
 * [epinephrine.tsv](./sbmlsim/DoseResponseExperiment_data_epinephrine.tsv)
@@ -18,7 +19,7 @@
 
 
 ## Code
-[../pyexsimo/experiments/dose_response.py](../pyexsimo/experiments/dose_response.py)
+[https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/dose_response.py](https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/dose_response.py)
 
 ```python
 from typing import Dict

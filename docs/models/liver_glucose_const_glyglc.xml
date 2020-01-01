@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" metaid="meta_fc064654583a40fca4b16e26e60bd9a1" sboTerm="SBO:0000293" level="3" version="1" fbc:required="false" comp:required="true">
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" metaid="meta_e3fc0b622d464a9b9654cc1509004eec" sboTerm="SBO:0000293" level="3" version="1" fbc:required="false" comp:required="true">
   <annotation>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-      <rdf:Description rdf:about="#meta_fc064654583a40fca4b16e26e60bd9a1">
+      <rdf:Description rdf:about="#meta_e3fc0b622d464a9b9654cc1509004eec">
         <bqmodel:is>
           <rdf:Bag>
             <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000293"/>
@@ -66,10 +66,10 @@
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2020-01-01T16:21:32Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2020-01-01T17:08:39Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2020-01-01T16:21:32Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2020-01-01T17:08:39Z</dcterms:W3CDTF>
           </dcterms:modified>
           <bqbiol:hasTaxon>
             <rdf:Bag>
@@ -3819,10 +3819,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_f01af04419644e4a92e3fa86d0c6bb93" sboTerm="SBO:0000359" variable="nadh_tot">
+      <assignmentRule metaid="meta_e8787cb4ba1b467d8d279d440f46a94a" sboTerm="SBO:0000359" variable="nadh_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_f01af04419644e4a92e3fa86d0c6bb93">
+            <rdf:Description rdf:about="#meta_e8787cb4ba1b467d8d279d440f46a94a">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3839,10 +3839,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_8bb14c8f721b4e98a077d249ca579f0b" sboTerm="SBO:0000359" variable="atp_tot">
+      <assignmentRule metaid="meta_825f98837d1a4d249df6e07f630bbcd5" sboTerm="SBO:0000359" variable="atp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_8bb14c8f721b4e98a077d249ca579f0b">
+            <rdf:Description rdf:about="#meta_825f98837d1a4d249df6e07f630bbcd5">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3860,10 +3860,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_e22cff91f61e4d63b7b84b691b332d57" sboTerm="SBO:0000359" variable="utp_tot">
+      <assignmentRule metaid="meta_360fb28852004c9fb2c16f2218762d24" sboTerm="SBO:0000359" variable="utp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_e22cff91f61e4d63b7b84b691b332d57">
+            <rdf:Description rdf:about="#meta_360fb28852004c9fb2c16f2218762d24">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3881,10 +3881,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_ec43510957b54b27b089c76be852d090" sboTerm="SBO:0000359" variable="gtp_tot">
+      <assignmentRule metaid="meta_ae872b785c014a789d6546602149ad3c" sboTerm="SBO:0000359" variable="gtp_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_ec43510957b54b27b089c76be852d090">
+            <rdf:Description rdf:about="#meta_ae872b785c014a789d6546602149ad3c">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3901,10 +3901,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_633aadd711ba49ccbb633c0312172785" sboTerm="SBO:0000359" variable="nadh_mito_tot">
+      <assignmentRule metaid="meta_6762f4ae82234da48effa4f75dddb4b3" sboTerm="SBO:0000359" variable="nadh_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_633aadd711ba49ccbb633c0312172785">
+            <rdf:Description rdf:about="#meta_6762f4ae82234da48effa4f75dddb4b3">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3921,10 +3921,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_d8979c4f29674190a41f8cecf5329ab0" sboTerm="SBO:0000359" variable="atp_mito_tot">
+      <assignmentRule metaid="meta_fc273417d5c54ae893dd47a7118e68aa" sboTerm="SBO:0000359" variable="atp_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_d8979c4f29674190a41f8cecf5329ab0">
+            <rdf:Description rdf:about="#meta_fc273417d5c54ae893dd47a7118e68aa">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>
@@ -3941,10 +3941,10 @@
           </apply>
         </math>
       </assignmentRule>
-      <assignmentRule metaid="meta_c151bb75ddb04eacbe0a984185a6d582" sboTerm="SBO:0000359" variable="gtp_mito_tot">
+      <assignmentRule metaid="meta_6089970369254356abeb8121750040d3" sboTerm="SBO:0000359" variable="gtp_mito_tot">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-            <rdf:Description rdf:about="#meta_c151bb75ddb04eacbe0a984185a6d582">
+            <rdf:Description rdf:about="#meta_6089970369254356abeb8121750040d3">
               <bqbiol:is>
                 <rdf:Bag>
                   <rdf:li rdf:resource="https://identifiers.org/sbo/SBO:0000359"/>

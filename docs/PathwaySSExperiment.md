@@ -3,7 +3,8 @@
 # PathwaySSExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose_const_glyglc.xml](models/liver_glucose_const_glyglc.xml)
+* **SBML**: [models/liver_glucose_const_glyglc.xml](models/liver_glucose_const_glyglc.xml)
+* **HTML**: [models/liver_glucose_const_glyglc.html](models/liver_glucose_const_glyglc.html)
 
 ## Datasets
 
@@ -15,7 +16,7 @@
 
 
 ## Code
-[../pyexsimo/experiments/hgp_gng_ss.py](../pyexsimo/experiments/hgp_gng_ss.py)
+[https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/hgp_gng_ss.py](https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/hgp_gng_ss.py)
 
 ```python
 from typing import Dict
