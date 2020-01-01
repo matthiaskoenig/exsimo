@@ -4,5 +4,5 @@ pandas>=0.24.2
 matplotlib>=3.0.3
 jinja2
 pytest
--e git://github.com/matthiaskoenig/sbmlutils.git@8f0ac#egg=sbmlutils
--e git://github.com/matthiaskoenig/sbmlsim.git@b5c91fd#egg=sbmlsim
+-e git://github.com/matthiaskoenig/sbmlutils.git@8f0ac6d2db616a3de217290b21738d4c4c638e20#egg=sbmlutils
+-e git://github.com/matthiaskoenig/sbmlsim.git@573addfb9d0920849b30f032709e159736fa80f2#egg=sbmlsim
