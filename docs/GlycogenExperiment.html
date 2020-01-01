@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<p><a href="index.html">Experiments</a></p>
+<h1 id="glycogenexperiment">GlycogenExperiment</h1>
+<h2 id="model">Model</h2>
+<ul>
+<li><strong>SBML</strong>: <a href="../models/liver_glucose.xml" class="uri">../models/liver_glucose.xml</a></li>
+<li><strong>Model report</strong>: <a href="../models/liver_glucose.html" class="uri">../models/liver_glucose.html</a></li>
+</ul>
+<h2 id="datasets">Datasets</h2>
+<ul>
+<li><a href="./sbmlsim/GlycogenExperiment_data_Magnusson1992.tsv">Magnusson1992.tsv</a></li>
+<li><a href="./sbmlsim/GlycogenExperiment_data_Radziuk2001.tsv">Radziuk2001.tsv</a></li>
+</ul>
+<h2 id="figures">Figures</h2>
+<ul>
+<li><a href="GlycogenExperiment_fig1.png">GlycogenExperiment_fig1.png</a></li>
+</ul>
+<h3 id="fig1">fig1</h3>
+<div class="figure">
+<img src="GlycogenExperiment_fig1.png" alt="GlycogenExperiment_fig1.png" />
+<p class="caption">GlycogenExperiment_fig1.png</p>
+</div>
+<h2 id="code">Code</h2>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> typing <span class="im">import</span> Dict
+<span class="im">from</span> matplotlib.pyplot <span class="im">import</span> Figure
+<span class="im">import</span> numpy <span class="im">as</span> np
+
+<span class="im">from</span> sbmlsim.experiment <span class="im">import</span> SimulationExperiment
+<span class="im">from</span> sbmlsim.data <span class="im">import</span> DataSet
+<span class="im">from</span> sbmlsim.timecourse <span class="im">import</span> Timecourse, TimecourseSim, TimecourseScan
+<span class="im">from</span> sbmlsim.plotting_matplotlib <span class="im">import</span> add_data, add_line, plt
+
+
+<span class="kw">class</span> GlycogenExperiment(SimulationExperiment):
+    <span class="co">&quot;&quot;&quot; Simulation of glycogenolysis and glycogen synthesis.</span>
+
+<span class="co">    Setting various glucose concentration and running</span>
+<span class="co">    timecourses of glycogen storage and glycogenolysis.</span>
+<span class="co">    &quot;&quot;&quot;</span>
+    <span class="at">@property</span>
+    <span class="kw">def</span> datasets(<span class="va">self</span>) <span class="op">-&gt;</span> Dict[<span class="bu">str</span>, DataSet]:
+        dsets <span class="op">=</span> {}
+        <span class="cf">for</span> study_id <span class="kw">in</span> [<span class="st">&#39;Magnusson1992&#39;</span>, <span class="st">&#39;Rothman1991&#39;</span>, <span class="st">&#39;Radziuk2001&#39;</span>, <span class="st">&#39;Taylor1996&#39;</span>]:
+            dset_id <span class="op">=</span> <span class="ss">f&quot;Glycogen_Tab</span><span class="sc">{</span>study_id<span class="sc">}</span><span class="ss">&quot;</span>
+            df <span class="op">=</span> <span class="va">self</span>.load_data(dset_id)
+            df <span class="op">=</span> df[df.condition <span class="op">==</span> <span class="st">&quot;normal&quot;</span>]  <span class="co"># only healthy controls</span>
+            udict <span class="op">=</span> {key: df[<span class="ss">f&quot;</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">_unit&quot;</span>].unique()[<span class="dv">0</span>] <span class="cf">for</span> key <span class="kw">in</span>
+                     [<span class="st">&quot;time&quot;</span>, <span class="st">&quot;gly&quot;</span>]}
+            dsets[study_id] <span class="op">=</span> DataSet.from_df(df, udict<span class="op">=</span>udict, ureg<span class="op">=</span><span class="va">self</span>.ureg)
+
+        <span class="cf">return</span> dsets
+
+    <span class="at">@property</span>
+    <span class="kw">def</span> scans(<span class="va">self</span>) <span class="op">-&gt;</span> Dict[<span class="bu">str</span>, TimecourseScan]:
+        <span class="co">&quot;&quot;&quot;Scanning glycogen synthesis and glycogenolysis under</span>
+<span class="co">        various external glucose concentrations.</span>
+<span class="co">        &quot;&quot;&quot;</span>
+        Q_ <span class="op">=</span> <span class="va">self</span>.ureg.Quantity
+        gly_scan <span class="op">=</span> TimecourseScan(
+            tcsim<span class="op">=</span>TimecourseSim([
+                Timecourse(start<span class="op">=</span><span class="dv">0</span>, end<span class="op">=</span><span class="dv">65</span><span class="op">*</span><span class="dv">60</span>, steps<span class="op">=</span><span class="dv">1000</span>, changes<span class="op">=</span>{
+                    <span class="st">&#39;[glyglc]&#39;</span>: Q_(<span class="dv">500</span>, <span class="st">&#39;mM&#39;</span>)
+                })
+            ]),
+            scan<span class="op">=</span>{<span class="st">&#39;[glc_ext]&#39;</span>: Q_(np.linspace(<span class="fl">3.6</span>, <span class="fl">5.0</span>, num<span class="op">=</span><span class="dv">8</span>), <span class="st">&#39;mM&#39;</span>)},
+        )
+        gs_scan <span class="op">=</span> TimecourseScan(
+            tcsim<span class="op">=</span>TimecourseSim([
+                Timecourse(start<span class="op">=</span><span class="dv">0</span>, end<span class="op">=</span><span class="dv">300</span>, steps<span class="op">=</span><span class="dv">600</span>, changes<span class="op">=</span>{
+                    <span class="st">&#39;[glyglc]&#39;</span>: Q_(<span class="dv">200</span>, <span class="st">&#39;mM&#39;</span>)
+                })
+            ]),
+            scan<span class="op">=</span>{<span class="st">&#39;[glc_ext]&#39;</span>: Q_(np.linspace(<span class="fl">5.5</span>, <span class="fl">8.0</span>, num<span class="op">=</span><span class="dv">6</span>), <span class="st">&#39;mM&#39;</span>)},
+        )
+        <span class="cf">return</span> {
+            <span class="st">&quot;gly_scan&quot;</span>: gly_scan,
+            <span class="st">&quot;gs_scan&quot;</span>: gs_scan,
+        }
+
+    <span class="at">@property</span>
+    <span class="kw">def</span> simulations(<span class="va">self</span>) <span class="op">-&gt;</span> Dict[<span class="bu">str</span>, TimecourseSim]:
+        <span class="cf">return</span> {}
+
+    <span class="at">@property</span>
+    <span class="kw">def</span> figures(<span class="va">self</span>) <span class="op">-&gt;</span> Dict[<span class="bu">str</span>, Figure]:
+        xunit_ax1 <span class="op">=</span> <span class="st">&quot;hr&quot;</span>
+        xunit_ax2 <span class="op">=</span> <span class="st">&quot;min&quot;</span>
+        yunit_gly <span class="op">=</span> <span class="st">&quot;mM&quot;</span>
+
+        f, ((ax1, ax2)) <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">10</span>))
+        f.subplots_adjust(wspace<span class="op">=</span>.<span class="dv">3</span>, hspace<span class="op">=</span>.<span class="dv">3</span>)
+        axes <span class="op">=</span> (ax1, ax2)
+
+        <span class="co"># simulation</span>
+        kwargs <span class="op">=</span> {
+            <span class="st">&#39;color&#39;</span>: <span class="st">&quot;black&quot;</span>,
+            <span class="st">&#39;linestyle&#39;</span>: <span class="st">&quot;-&quot;</span>,
+            <span class="st">&#39;linewidth&#39;</span>: <span class="st">&quot;2&quot;</span>,
+        }
+        result <span class="op">=</span> <span class="va">self</span>.scan_results[<span class="st">&#39;gly_scan&#39;</span>]
+        add_line(ax1, result, xid<span class="op">=</span><span class="st">&quot;time&quot;</span>, yid<span class="op">=</span><span class="st">&quot;[glyglc]&quot;</span>, xunit<span class="op">=</span>xunit_ax1,
+                 yunit<span class="op">=</span>yunit_gly,
+                 all_lines<span class="op">=</span><span class="va">True</span>, <span class="op">**</span>kwargs)
+        result <span class="op">=</span> <span class="va">self</span>.scan_results[<span class="st">&#39;gs_scan&#39;</span>]
+        add_line(ax2, result, xid<span class="op">=</span><span class="st">&quot;time&quot;</span>, yid<span class="op">=</span><span class="st">&quot;[glyglc]&quot;</span>, xunit<span class="op">=</span>xunit_ax2,
+                 yunit<span class="op">=</span>yunit_gly,
+                 all_lines<span class="op">=</span><span class="va">True</span>, <span class="op">**</span>kwargs)
+
+        <span class="co"># experimental data</span>
+        kwargs <span class="op">=</span> {
+            <span class="st">&#39;color&#39;</span>: <span class="st">&quot;black&quot;</span>,
+            <span class="st">&#39;linestyle&#39;</span>: <span class="st">&quot;--&quot;</span>,
+            <span class="st">&#39;alpha&#39;</span>: <span class="fl">0.6</span>,
+        }
+        dset <span class="op">=</span> <span class="va">self</span>.datasets[<span class="st">&quot;Magnusson1992&quot;</span>]
+        add_data(ax1, dset, xid<span class="op">=</span><span class="st">&quot;time&quot;</span>, yid<span class="op">=</span><span class="st">&quot;gly&quot;</span>,
+                 yid_sd<span class="op">=</span><span class="st">&quot;gly_sd&quot;</span>,
+                 xunit<span class="op">=</span>xunit_ax1, yunit<span class="op">=</span>yunit_gly, label<span class="op">=</span><span class="st">&quot;Glycogen&quot;</span>, <span class="op">**</span>kwargs)
+
+        dset <span class="op">=</span> <span class="va">self</span>.datasets[<span class="st">&quot;Rothman1991&quot;</span>]
+        <span class="cf">for</span> subject_id <span class="kw">in</span> dset.subject.unique():
+            add_data(ax1, dset[dset.subject<span class="op">==</span>subject_id], xid<span class="op">=</span><span class="st">&quot;time&quot;</span>, yid<span class="op">=</span><span class="st">&quot;gly&quot;</span>,
+                 xunit<span class="op">=</span>xunit_ax1, yunit<span class="op">=</span>yunit_gly, label<span class="op">=</span><span class="ss">f&quot;Glycogen </span><span class="sc">{</span>subject_id<span class="sc">}</span><span class="ss">&quot;</span>, <span class="op">**</span>kwargs)
+
+        dset <span class="op">=</span> <span class="va">self</span>.datasets[<span class="st">&quot;Radziuk2001&quot;</span>]
+        <span class="cf">for</span> ref_id <span class="kw">in</span> dset.reference.unique():
+            add_data(ax2, dset[dset.reference <span class="op">==</span> ref_id], xid<span class="op">=</span><span class="st">&quot;time&quot;</span>,
+                     yid<span class="op">=</span><span class="st">&quot;gly&quot;</span>,
+                     xunit<span class="op">=</span>xunit_ax2, yunit<span class="op">=</span>yunit_gly,
+                     label<span class="op">=</span><span class="ss">f&quot;Glycogen </span><span class="sc">{</span>ref_id<span class="sc">}</span><span class="ss">&quot;</span>, <span class="op">**</span>kwargs)
+
+        dset <span class="op">=</span> <span class="va">self</span>.datasets[<span class="st">&quot;Taylor1996&quot;</span>]
+        add_data(ax2, dset, xid<span class="op">=</span><span class="st">&quot;time&quot;</span>, yid<span class="op">=</span><span class="st">&quot;gly&quot;</span>,
+                 yid_sd<span class="op">=</span><span class="st">&quot;gly_sd&quot;</span>,
+                 xunit<span class="op">=</span>xunit_ax2, yunit<span class="op">=</span>yunit_gly, label<span class="op">=</span><span class="st">&quot;Glycogen&quot;</span>, <span class="op">**</span>kwargs)
+
+        ax1.set_xlabel(<span class="ss">f&#39;time [</span><span class="sc">{</span>xunit_ax1<span class="sc">}</span><span class="ss">]&#39;</span>)
+        ax2.set_xlabel(<span class="ss">f&#39;time [</span><span class="sc">{</span>xunit_ax2<span class="sc">}</span><span class="ss">]&#39;</span>)
+        <span class="cf">for</span> ax <span class="kw">in</span> axes:
+            ax.set_ylabel(<span class="st">&#39;glycogen [mM]&#39;</span>)
+
+        ax1.set_ylim(<span class="dv">0</span>, <span class="dv">500</span>)
+        ax1.set_xlim(<span class="dv">0</span>, <span class="dv">65</span>)
+        ax2.set_ylim(<span class="dv">180</span>, <span class="dv">340</span>)
+
+        <span class="cf">return</span> {
+            <span class="st">&#39;fig1&#39;</span>: f
+        }</code></pre></div>
+</body>
+</html>

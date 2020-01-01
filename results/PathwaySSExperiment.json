@@ -1,6 +1,0 @@
-{
-  "experiment_id": "PathwaySSExperiment",
-  "model_path": "/home/mkoenig/git/exsimo/models/liver_glucose_const_glyglc.xml",
-  "data_path": "/home/mkoenig/git/exsimo/data",
-  "simulations": {}
-}
