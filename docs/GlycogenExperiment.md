@@ -4,11 +4,12 @@
 
 ## Model
 * **SBML**: [../models/liver_glucose.xml](../models/liver_glucose.xml)
-* **Model report**: [../models/liver_glucose.html](../models/liver_glucose.html)
 
 ## Datasets
 * [Magnusson1992.tsv](./sbmlsim/GlycogenExperiment_data_Magnusson1992.tsv)
 * [Radziuk2001.tsv](./sbmlsim/GlycogenExperiment_data_Radziuk2001.tsv)
+* [Rothman1991.tsv](./sbmlsim/GlycogenExperiment_data_Rothman1991.tsv)
+* [Taylor1996.tsv](./sbmlsim/GlycogenExperiment_data_Taylor1996.tsv)
 
 ## Figures
 * [GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png)
@@ -18,6 +19,8 @@
 
 
 ## Code
+[../pyexsimo/experiments/glycogen.py](../pyexsimo/experiments/glycogen.py)
+
 ```python
 from typing import Dict
 from matplotlib.pyplot import Figure

@@ -10,7 +10,6 @@
 [https://github.com/matthiaskoenig/exsimo](https://github.com/matthiaskoenig/exsimo)
 
 ## Simulation Experiments
-* [DoseResponseExperiment](DoseResponseExperiment.html)
-* [PathwayExperiment](PathwayExperiment.html)
-* [GlycogenExperiment](GlycogenExperiment.html)
-* [PathwaySSExperiment](PathwaySSExperiment.html)
+{% for exp_id in exp_ids %}
+* [{{ exp_id }}]({{ exp_id }}.html)
+{% endfor %}
