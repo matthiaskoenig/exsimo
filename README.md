@@ -12,8 +12,8 @@
 Data, model and code for executable simulation model of hepatic glucose metabolism.
 
 * `data` - data sets
-* `docs` - documentation, results, report
-* `models` - SBML model and model report
+* `docs` - documentation, results, report, models
+* `docs/models` - SBML model and model report
 * `pyexsimo` - python package (model generation, simulation experiments, tests, ...)
 
 Results of the executed model are available from https://matthiaskoenig.github.io/exsimo/ 

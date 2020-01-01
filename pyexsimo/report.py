@@ -6,7 +6,7 @@ import os
 import logging
 import jinja2
 
-from pyexsimo import TEMPLATE_PATH
+from pyexsimo import TEMPLATE_PATH, BASE_PATH
 from pyexsimo import __version__
 
 logger = logging.getLogger(__name__)
@@ -27,16 +27,20 @@ def create_report(results, output_path):
 
         # relative paths to output path
         model_path = os.path.relpath(str(item['model_path']), output_path)
+        report_path = f"{model_path[:-4]}.html"
         data_path = os.path.relpath(str(item['data_path']), output_path)
 
         code_path = sys.modules[exp.__module__].__file__
         with open(code_path, "r") as f_code:
             code = f_code.read()
-        code_path = os.path.relpath(code_path, output_path)
+        code_path = os.path.relpath(code_path, BASE_PATH.parent)
+        code_path = "https:/" + os.path.join("/github.com/matthiaskoenig/exsimo/tree/master/", code_path)
+        print(code_path)
 
         context = {
             'exp_id': exp_id,
             'model_path': model_path,
+            'report_path': report_path,
             'data_path': data_path,
             'datasets': sorted(exp.datasets.keys()),
             'figures': sorted(exp.figures.keys()),

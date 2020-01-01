@@ -3,7 +3,7 @@
 # PathwayExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose.xml](../models/liver_glucose.xml)
+* **SBML**: [../models/liver_glucose.xml](models/liver_glucose.xml)
 
 ## Datasets
 * [Nuttal2008_TabA.tsv](./sbmlsim/PathwayExperiment_data_Nuttal2008_TabA.tsv)

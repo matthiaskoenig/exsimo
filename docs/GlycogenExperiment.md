@@ -3,7 +3,8 @@
 # GlycogenExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose.xml](../models/liver_glucose.xml)
+* **SBML**: [models/liver_glucose.xml](models/liver_glucose.xml)
+* **HTML**: [models/liver_glucose.html](models/liver_glucose.html)
 
 ## Datasets
 * [Magnusson1992.tsv](./sbmlsim/GlycogenExperiment_data_Magnusson1992.tsv)
@@ -19,7 +20,7 @@
 
 
 ## Code
-[../pyexsimo/experiments/glycogen.py](../pyexsimo/experiments/glycogen.py)
+[https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/glycogen.py](https://github.com/matthiaskoenig/exsimo/tree/master/pyexsimo/experiments/glycogen.py)
 
 ```python
 from typing import Dict
