@@ -11,7 +11,7 @@
 * [Radziuk2001.tsv](./sbmlsim/GlycogenExperiment_data_Radziuk2001.tsv)
 
 ## Figures
-* [GlycogenExperiment_fig1.png](./GlycogenExperiment_fig1.png)
+* [GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png)
 
 ### fig1
 ![GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png)
