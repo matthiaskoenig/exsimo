@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/matthiaskoenig/exsimo.svg?branch=develop)](https://travis-ci.org/matthiaskoenig/exsimo)
 [![GitHub version](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo.svg)](https://badge.fury.io/gh/matthiaskoenig%2Fexsimo)
 [![codecov](https://codecov.io/gh/matthiaskoenig/exsimo/branch/develop/graph/badge.svg)](https://codecov.io/gh/matthiaskoenig/exsimo)
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/matthiaskoenig/exsimo)
-![Docker Pulls](https://img.shields.io/docker/pulls/matthiaskoenig/exsimo)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/matthiaskoenig/exsimo)](https://hub.docker.com/repository/docker/matthiaskoenig/exsimo)
+[![Docker Pulls](https://img.shields.io/docker/pulls/matthiaskoenig/exsimo)](https://hub.docker.com/repository/docker/matthiaskoenig/exsimo)
 
 <b><a href="https://orcid.org/0000-0003-1725-179X" title="https://orcid.org/0000-0003-1725-179X"><img src="./docs/images/orcid.png" height="15"/></a> Matthias König</b>
 
@@ -44,7 +44,7 @@ docker run -it matthiaskoenig/exsimo:latest
 ```
 To run a specific model version use the respective tag
 ```bash
-docker run -it matthiaskoenig/exsimo:0.3.0
+docker run -it matthiaskoenig/exsimo:0.3.1
 ```
 To run the tests use `pytest`, to execute the analysis use `execute`.
 
@@ -57,7 +57,7 @@ pytest
 ## Run analysis
 The complete analysis can be run via
 ```
-(exsimo) execute
+execute
 ```
 which updates the results in the `./docs/` folder.
 
