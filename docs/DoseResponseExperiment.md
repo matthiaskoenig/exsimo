@@ -3,7 +3,7 @@
 # DoseResponseExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose.xml](../models/liver_glucose.xml)
+* **SBML**: [../models/liver_glucose.xml](models/liver_glucose.xml)
 
 ## Datasets
 * [epinephrine.tsv](./sbmlsim/DoseResponseExperiment_data_epinephrine.tsv)

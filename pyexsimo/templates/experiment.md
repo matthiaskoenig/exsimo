@@ -4,6 +4,7 @@
 
 ## Model
 * **SBML**: [{{ model_path }}]({{ model_path }})
+* **HTML**: [{{ report_path }}]({{ report_path }})
 
 ## Datasets
 {% for dset_id in datasets %}

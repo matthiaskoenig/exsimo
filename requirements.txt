@@ -6,4 +6,3 @@ jinja2
 pytest
 -e git://github.com/matthiaskoenig/sbmlutils.git@8f0ac#egg=sbmlutils
 -e git://github.com/matthiaskoenig/sbmlsim.git@b5c91fd#egg=sbmlsim
-

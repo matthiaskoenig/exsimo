@@ -3,7 +3,7 @@
 # PathwaySSExperiment
 
 ## Model
-* **SBML**: [../models/liver_glucose_const_glyglc.xml](../models/liver_glucose_const_glyglc.xml)
+* **SBML**: [../models/liver_glucose_const_glyglc.xml](models/liver_glucose_const_glyglc.xml)
 
 ## Datasets
 

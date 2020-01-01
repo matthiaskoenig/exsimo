@@ -16,8 +16,19 @@ execute
 ```
 ## execute analysis in docker
 - build docker container
+Build image from `Dockerfile`
+```
+$EXSIMO_VERSION
+docker build -t matthiaskoenig/exsimo:${EXSIMO_VERSION} .
+```
 - run tests in docker container
+```bash
+docker container exec <container name/ID> pytest
+```
 - execute analysis in docker container
+```bash
+docker container exec <container name/ID> pytest
+```
 
 ## push results and code
 ```
@@ -33,6 +44,11 @@ git push
 
 ## update container
 - push container to dockerhub (with new version tag)
+
+The images can be pushed to the hub via
+```
+docker push matthiaskoenig/dmod:latest
+```
 
 ## update develop branch
 ```
