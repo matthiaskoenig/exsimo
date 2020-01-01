@@ -12,16 +12,15 @@
 Data, model and code for executable simulation model of hepatic glucose metabolism.
 
 * `data` - data sets
-* `docs` - documentation
+* `docs` - documentation, results, report
 * `models` - SBML model and model report
 * `pyexsimo` - python package (model generation, simulation experiments, tests, ...)
-* `results` - results of simulation experiments 
 
-## Docker
-The analysis can be run in docker via
+Results of the executed model are available from https://matthiaskoenig.github.io/exsimo/ 
 
 
-## Installation
+## Run locally
+To run the analysis locally create a python virtual environment and install `pyexsimo` 
 
 ### virtualenv
 Create virtual environment with `python3.6`, e.g., with `virtualenv` & `virtualenvwrapper` via
@@ -37,19 +36,19 @@ cd exsimo
 (exsimo) pip install -e . --upgrade
 ```
 ## Tests
-Tests can be run via
+All tests can be run via
 ```
 (exsimo) pytest
 ```
 ## Run analysis
-The complete analysis, i.e.,
-- generation of SBML models
-- execution of simulation experiments
-- creating all figures
-can be run via
+The complete analysis can be run via
 ```
 (exsimo) execute
 ```
+which updates the results in the `./docs/` folder.
+
+## Run in docer container
+coming soon 
 
 ----
 &copy; 2019 Matthias König.
