@@ -43,6 +43,8 @@ def create_report(results, output_path):
             'report_path': report_path,
             'data_path': data_path,
             'datasets': sorted(exp.datasets.keys()),
+            'simulations': sorted(exp.simulations.keys()),
+            'scans': sorted(exp.simulations.keys()),
             'figures': sorted(exp.figures.keys()),
             'code_path': code_path,
             'code': code,

@@ -19,7 +19,7 @@ class PathwaySSExperiment(SimulationExperiment):
         Q_ = self.ureg.Quantity
         ss_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=1000, steps=10)
+                Timecourse(start=0, end=1000, steps=1)
             ]),
             scan={
                 '[glc_ext]': Q_(np.linspace(2, 14, num=40), 'mM'),

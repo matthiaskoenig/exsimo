@@ -13,7 +13,7 @@
 
 ## Figures
 {% for fig_id in figures %}
-* [{{ exp_id }}_{{ fig_id }}.png]({{ exp_id }}_{{ fig_id }}.png) ([SVG]({{ exp_id }}_{{ fig_id }}.svg))
+* [{{ exp_id }}_{{ fig_id }}.svg]({{ exp_id }}_{{ fig_id }}.svg)
 {% endfor %}
 
 {% for fig_id in figures %}

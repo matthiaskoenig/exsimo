@@ -9,7 +9,7 @@
 ## Datasets
 
 ## Figures
-* [PathwaySSExperiment_fig1.png](PathwaySSExperiment_fig1.png) ([SVG](PathwaySSExperiment_fig1.svg))
+* [PathwaySSExperiment_fig1.svg](PathwaySSExperiment_fig1.svg)
 
 ### fig1
 ![PathwaySSExperiment_fig1.svg](PathwaySSExperiment_fig1.svg)
@@ -40,7 +40,7 @@ class PathwaySSExperiment(SimulationExperiment):
         Q_ = self.ureg.Quantity
         ss_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=1000, steps=10)
+                Timecourse(start=0, end=1000, steps=1)
             ]),
             scan={
                 '[glc_ext]': Q_(np.linspace(2, 14, num=40), 'mM'),
