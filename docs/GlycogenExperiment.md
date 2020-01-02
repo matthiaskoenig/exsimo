@@ -13,10 +13,10 @@
 * [Taylor1996.tsv](./sbmlsim/GlycogenExperiment_data_Taylor1996.tsv)
 
 ## Figures
-* [GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png)
+* [GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png) ([SVG](GlycogenExperiment_fig1.svg))
 
 ### fig1
-![GlycogenExperiment_fig1.png](GlycogenExperiment_fig1.png)
+![GlycogenExperiment_fig1.svg](GlycogenExperiment_fig1.svg)
 
 
 ## Code

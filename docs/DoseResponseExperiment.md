@@ -12,10 +12,10 @@
 * [insulin.tsv](./sbmlsim/DoseResponseExperiment_data_insulin.tsv)
 
 ## Figures
-* [DoseResponseExperiment_fig1.png](DoseResponseExperiment_fig1.png)
+* [DoseResponseExperiment_fig1.png](DoseResponseExperiment_fig1.png) ([SVG](DoseResponseExperiment_fig1.svg))
 
 ### fig1
-![DoseResponseExperiment_fig1.png](DoseResponseExperiment_fig1.png)
+![DoseResponseExperiment_fig1.svg](DoseResponseExperiment_fig1.svg)
 
 
 ## Code

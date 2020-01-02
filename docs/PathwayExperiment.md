@@ -10,10 +10,10 @@
 * [Nuttal2008_TabA.tsv](./sbmlsim/PathwayExperiment_data_Nuttal2008_TabA.tsv)
 
 ## Figures
-* [PathwayExperiment_fig1.png](PathwayExperiment_fig1.png)
+* [PathwayExperiment_fig1.png](PathwayExperiment_fig1.png) ([SVG](PathwayExperiment_fig1.svg))
 
 ### fig1
-![PathwayExperiment_fig1.png](PathwayExperiment_fig1.png)
+![PathwayExperiment_fig1.svg](PathwayExperiment_fig1.svg)
 
 
 ## Code

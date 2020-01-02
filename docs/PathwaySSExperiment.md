@@ -9,10 +9,10 @@
 ## Datasets
 
 ## Figures
-* [PathwaySSExperiment_fig1.png](PathwaySSExperiment_fig1.png)
+* [PathwaySSExperiment_fig1.png](PathwaySSExperiment_fig1.png) ([SVG](PathwaySSExperiment_fig1.svg))
 
 ### fig1
-![PathwaySSExperiment_fig1.png](PathwaySSExperiment_fig1.png)
+![PathwaySSExperiment_fig1.svg](PathwaySSExperiment_fig1.svg)
 
 
 ## Code
