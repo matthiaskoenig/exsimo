@@ -40,7 +40,7 @@ class GlycogenExperiment(SimulationExperiment):
         Q_ = self.ureg.Quantity
         gly_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=65 * 60, steps=1000, changes={
+                Timecourse(start=0, end=65 * 60, steps=500, changes={
                     '[glyglc]': Q_(500, 'mM')
                 })
             ]),
@@ -48,7 +48,7 @@ class GlycogenExperiment(SimulationExperiment):
         )
         gs_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=300, steps=600, changes={
+                Timecourse(start=0, end=300, steps=500, changes={
                     '[glyglc]': Q_(200, 'mM')
                 })
             ]),

@@ -5,8 +5,10 @@ This document describes steps for releasing a new version
 ```
 git checkout develop
 ```
-## bump version
-Update version info in `_version.py`
+## bump version & requirements
+- update version info in `pyexsimo/_version.py`
+- check `sbmlsim` and `sbmlutils` hashes in `requirements.txt`
+
 ## run tests 
 ```
 (exsimo) pytest
@@ -29,6 +31,11 @@ Merge pull request in master. This triggers a zenodo update and the build of a n
 
 ## check online report
 [https://matthiaskoenig.github.io/exsimo/](https://matthiaskoenig.github.io/exsimo/)
+
+## upload tagged docker-container
+docker build -t matthiaskoenig/exsimo:${EXSIMO_VERSION} .
+docker login
+docker push matthiaskoenig/exsimo:${EXSIMO_VERSION}
 
 ## update develop branch
 ```

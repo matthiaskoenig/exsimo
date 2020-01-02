@@ -5,3 +5,4 @@ pyexsimo.egg-info/
 *.xlsx#
 .ipynb_checkpoints/
 __pycache__
+*.h5

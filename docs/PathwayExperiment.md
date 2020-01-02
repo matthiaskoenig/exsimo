@@ -10,10 +10,10 @@
 * [Nuttal2008_TabA.tsv](./sbmlsim/PathwayExperiment_data_Nuttal2008_TabA.tsv)
 
 ## Figures
-* [PathwayExperiment_fig1.png](PathwayExperiment_fig1.png)
+* [PathwayExperiment_fig1.svg](PathwayExperiment_fig1.svg)
 
 ### fig1
-![PathwayExperiment_fig1.png](PathwayExperiment_fig1.png)
+![PathwayExperiment_fig1.svg](PathwayExperiment_fig1.svg)
 
 
 ## Code
@@ -52,7 +52,7 @@ class PathwayExperiment(SimulationExperiment):
         Q_ = self.ureg.Quantity
         glc_scan = TimecourseScan(
             tcsim=TimecourseSim([
-                Timecourse(start=0, end=70 * 60, steps=2000, changes={
+                Timecourse(start=0, end=70 * 60, steps=500, changes={
                     '[glyglc]': Q_(350, 'mM')
                 })
             ], time_offset=600),
