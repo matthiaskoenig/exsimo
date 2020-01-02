@@ -1,4 +1,4 @@
-<h1><img alt="EXSIMO logo" src="./docs/images/exsimo_logo_200.png" height="100" /> EXSIMO: EXecutable SImulation MOdel</h1>
+<h1><img src="./docs/images/exsimo_logo_200.png" height="100" /> EXSIMO: EXecutable SImulation MOdel</h1>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3596068.svg)](https://doi.org/10.5281/zenodo.3596068)
 [![Build Status](https://travis-ci.org/matthiaskoenig/exsimo.svg?branch=develop)](https://travis-ci.org/matthiaskoenig/exsimo)
@@ -19,6 +19,8 @@ Data, model and code for executable simulation model of hepatic glucose metaboli
 Results of the executed model are available from https://matthiaskoenig.github.io/exsimo/ 
 
 Docker images available from https://hub.docker.com/repository/docker/matthiaskoenig/exsimo
+
+<img src="./docs/images/exsimo_overview.png" width="400" />
 
 ## Setup local environment
 To run the analysis locally create a python virtual environment and install `pyexsimo`. 
