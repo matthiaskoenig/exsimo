@@ -20,7 +20,7 @@ Results of the executed model are available from https://matthiaskoenig.github.i
 
 Docker images available from https://hub.docker.com/repository/docker/matthiaskoenig/exsimo
 
-<img src="./docs/images/exsimo_overview.png" width="400" />
+<img src="./docs/images/exsimo_overview.png" width="600" />
 
 ## Setup local environment
 To run the analysis locally create a python virtual environment and install `pyexsimo`. 
