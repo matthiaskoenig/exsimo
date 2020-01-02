@@ -32,11 +32,6 @@ Merge pull request in master. This triggers a zenodo update and the build of a n
 ## check online report
 [https://matthiaskoenig.github.io/exsimo/](https://matthiaskoenig.github.io/exsimo/)
 
-## upload tagged docker-container
-docker build -t matthiaskoenig/exsimo:${EXSIMO_VERSION} .
-docker login
-docker push matthiaskoenig/exsimo:${EXSIMO_VERSION}
-
 ## update develop branch
 ```
 git checkout master
@@ -46,3 +41,17 @@ git merge master
 ```
 - bump version
 - push changes
+
+## upload tagged docker-container
+Either build the container locally
+```
+docker build -t matthiaskoenig/exsimo:${EXSIMO_VERSION} .
+```
+or better use the auto build container (takes some time)
+```
+docker pull matthiaskoenig/exsimo:latest
+docker tag matthiaskoenig/exsimo:latest matthiaskoenig/exsimo:${EXSIMO_VERSION} 
+```
+docker login
+docker push matthiaskoenig/exsimo:${EXSIMO_VERSION}
+```
