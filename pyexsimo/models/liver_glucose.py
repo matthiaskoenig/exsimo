@@ -57,7 +57,6 @@ units = [
     UNIT_kg,
     UNIT_m,
     UNIT_m2,
-    UNIT_m3,
     UNIT_mmole, UNIT_mM,
     UNIT_per_s, UNIT_per_min,
     Unit('s_per_min', [(UNIT_KIND_SECOND, 1.0),
@@ -317,7 +316,7 @@ parameters = [
 # -----------------------------------------------------------------------------
 rules = [
     # initial assignments
-    AssignmentRule('V_mito', 'f_mito * V_cyto', 'm3',
+    AssignmentRule('V_mito', 'f_mito * V_cyto', UNIT_KIND_LITRE,
                    name='mitochondrial volume'),
     AssignmentRule('flux_conversion', 'mumole_per_mmole/bodyweight',
                    'mumole_per_mmole_kg'),

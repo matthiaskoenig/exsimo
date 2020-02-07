@@ -28,7 +28,7 @@ class bcolors:
     ENDC = '\033[0m'
 
 
-def run_experiments(output_path, show_figures=False, ):
+def run_experiments(output_path, show_figures=False):
     """Run all simulation experiments"""
     results = []
     for exp_class in [DoseResponseExperiment, PathwayExperiment,
