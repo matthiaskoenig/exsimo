@@ -17,7 +17,7 @@ Data, model and code for executable simulation model of hepatic glucose metaboli
 * `pyexsimo` - python package (model generation, simulation experiments, tests, ...)
 
 **Reports**: https://matthiaskoenig.github.io/exsimo/  
-**Docker images**: https://hub.docker.com/repository/docker/matthiaskoenig/exsimo  
+**Docker images**: https://hub.docker.com/r/matthiaskoenig/exsimo  
 **Zenodo snapshots**: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3596068.svg)](https://doi.org/10.5281/zenodo.3596068)  
 **Github releases**: https://github.com/matthiaskoenig/exsimo/releases  
  
